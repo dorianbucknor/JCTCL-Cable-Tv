@@ -1,4 +1,6 @@
 package Tv.JCTCL;
+import java.time.*;
+import java.util.*;
 
 public class Programme{
     protected String progName;
@@ -10,8 +12,12 @@ public class Programme{
     protected boolean isNew;
     protected boolean isRecorded;
     protected boolean isMarked;
+    protected String caption;
     protected float length;
     protected Channel channel;
+
+    Duration Length;
+
 
 
     public Programme() {
@@ -38,8 +44,11 @@ public class Programme{
         length = _pType.length;
     }
 
-    public void getChild(){
-
+    public String Caption(){
+        if (hasCaption){
+            caption = "";
+        }
+        return caption;
     }
 
     public String getShowTime() {
@@ -58,28 +67,28 @@ public class Programme{
         return length;
     }
 
-    public void setProgName(String _progName) {
-        this.progName = _progName;
+    public void setProgName(String progName) {
+        this.progName = progName;
     }
 
-    public void setShowDate(String _showDate) {
-        this.showDate = _showDate;
+    public void setShowDate(String showDate) {
+        this.showDate = showDate;
     }
 
-    public void setShowTime(String _showTime) {
-        this.showTime = _showTime;
+    public void setShowTime(String showTime) {
+        this.showTime = showTime;
     }
 
     public String getProgColour() {
         return progColour;
     }
 
-    public void setProgColour(String _progColour) {
-        this.progColour = _progColour;
+    public void setProgColour(String progColour) {
+        this.progColour = progColour;
     }
 
-    public void setLength(float _length) {
-        this.length = _length;
+    public void setLength(float length) {
+        this.length = length;
     }
 
 }

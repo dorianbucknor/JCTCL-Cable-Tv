@@ -1,15 +1,17 @@
 import Tv.JCTCL.*;
 
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
+
+
     public static void main(String[] args) {
-        Channel c = new Channel();
 
-        Programme p = new Programme();
-        p.setProgName("P");
-        Movies m = new Movies();
-        m.setProgName("M");
+        TvDisplay Tv = new TvDisplay();
 
-
+        Tv.function();
 
     }
 }
