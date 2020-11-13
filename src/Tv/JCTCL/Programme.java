@@ -57,6 +57,7 @@ public class Programme{
         progColour = _pType.progColour;
         length = _pType.length;
     }
+
     //returns programme show time
     public String getShowTime() {
         return showTime;
