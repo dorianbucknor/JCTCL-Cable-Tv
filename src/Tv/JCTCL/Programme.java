@@ -31,7 +31,6 @@ public class Programme{
     protected float length;/*change to long data type*/
     //store channel object of programme
     protected Channel channel = new Channel();
-    Duration Length;
 
     //default constructor
     public Programme() {

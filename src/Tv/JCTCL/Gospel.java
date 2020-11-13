@@ -1,4 +1,4 @@
 package Tv.JCTCL;
 
-public class Gospel {
+public class Gospel extends Programme{
 }

@@ -1,4 +1,4 @@
 package Tv.JCTCL;
 
-public class General {
+public class General extends Programme{
 }
