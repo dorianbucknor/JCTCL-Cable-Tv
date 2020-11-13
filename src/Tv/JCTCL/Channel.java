@@ -10,13 +10,13 @@ public class Channel{
     public Channel() {
         chName = "Unknown";
         chNumber = 000;
-        numOfProgs ++;
+        numOfProgs = 0;
     }
 
     public Channel(String _chName, int _chNumber, int _numOfProgs) {
         chNumber = _chNumber;
         chName = _chName;
-        numOfProgs ++;
+        numOfProgs = _numOfProgs;
     }
 
     public Channel(Channel _channel){

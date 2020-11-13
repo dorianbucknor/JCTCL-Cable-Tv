@@ -11,16 +11,13 @@ public class News extends Programme {
         length = 0.0f;
     }
 
-    News(String _period, Duration _length) {
+    News(String _period) {
         period = _period;
-
-       Length = _length;
-        Length.abs();
+        progColour = "White";
     }
 
     News(News _news) {
-
-
+        period = _news.period;
     }
 
     public String getPeriod() {

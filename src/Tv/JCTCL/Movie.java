@@ -3,10 +3,7 @@ package Tv.JCTCL;
 public class Movie extends Programme {
     private int rating;
     private String releaseDate;
-    private Channel channel = new Channel();
     private String[] actors = new String[25];
-
-    private String caption;
 
 
     public Movie(){
@@ -27,9 +24,7 @@ public class Movie extends Programme {
         releaseDate = _movie.releaseDate;
         actors = _movie.actors;
         channel = _movie.channel;
-
     }
-
 
     public String[] getActors() {
         return actors;
@@ -63,4 +58,8 @@ public class Movie extends Programme {
         this.rating = rating;
     }
 
+    @Override
+    public String Details() {
+        return channel.getChName() + channel.getChNumber() + progName + showDate + showTime + description + rating + actors + releaseDate;
+    }
 }

@@ -1,4 +1,4 @@
 package Tv.JCTCL;
 
-public class Kids {
+public class Kids extends Programme{
 }
