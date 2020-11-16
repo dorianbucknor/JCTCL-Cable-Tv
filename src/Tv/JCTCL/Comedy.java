@@ -6,7 +6,7 @@ public class Comedy extends Programme {
         private String episodeTitle;
 
         private String[] mActors = new String[25];
-    }
+
     public Comedy() {
         raTing = 0;
         length = 0.0f;
@@ -30,7 +30,8 @@ public class Comedy extends Programme {
     public String progName() {return progName;}
 
     public void setmActors(String[] mActors){this.mActors = mActors;};
-    public void set
+
+    //these below are actually right just duudnt need the one for channel
 
 /* public void setChannel(Channel channel) {
         this.channel = channel;
