@@ -10,40 +10,39 @@ public class Comedy extends Programme {
     public Comedy() {
         raTing = 0;
         length = 0.0f;
+        progColour = "Yellow";
         episodeTitle = "Unknown";
         channel = new Channel();
+        mActors = new String[25];
     }
-    public Comedy(Channel chaNnel, float length, int ratIng, String episodetitle, String[] aCtors ) {
+    public Comedy(int ratIng, String episodetitle, String[] aCtors ) {
         raTing = ratIng;
         episodeTitle = episodetitle;
         mActors = aCtors;
+        progColour = "Yellow";
     }
     public Comedy(Comedy _comedy) {
         raTing = _comedy.raTing;
         episodeTitle = _comedy.episodeTitle;
         mActors = _comedy.mActors;
         progName = _comedy.progName;
+        progColour = "Yellow";
+        channel = _comedy.channel;
     }
     public String[] getmActors() {return mActors;}
-    public String episodeTitle() {return episodeTitle;}
-    public int raTing() {return raTing;}
-    public String progName() {return progName;}
+    public String getEpisodeTitle() {return episodeTitle;}
 
     public void setmActors(String[] mActors){this.mActors = mActors;};
 
-    //these below are actually right just duudnt need the one for channel
-
-/* public void setChannel(Channel channel) {
-        this.channel = channel;
+    public void setEpisodeTitle(String episodeTitle) {
+        this.episodeTitle = episodeTitle;
     }
 
-    public void setActors(String[] actors) {
-        this.actors = actors;
+    public int getRaTing() {
+        return raTing;
     }
 
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }*/
-
+    public void setRaTing(int raTing) {
+        this.raTing = raTing;
+    }
 }

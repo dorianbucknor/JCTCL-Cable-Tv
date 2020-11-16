@@ -15,15 +15,18 @@ public class Movie extends Programme {
         rating = 0;
         length = 0.0f;
         releaseDate = "Unknown";
+        actors = new String[25];
+        progName = "Unknown";
         channel = new Channel();
+        progColour = "Red";
     }
     //primary constructor
-    public Movie(Channel _channel, String _progName, int _rating, float _length, String _rDate, String[] _actors) {
+    public Movie(String _progName, int _rating, String _rDate, String[] _actors) {
         rating = _rating;
         releaseDate =_rDate;
         actors = _actors;
-        channel = _channel;
         progName = _progName;
+        progColour = "Red";
     }
     //copy constructor
     public Movie(Movie _movie){
@@ -31,6 +34,7 @@ public class Movie extends Programme {
         releaseDate = _movie.releaseDate;
         actors = _movie.actors;
         channel = _movie.channel;
+        progColour = "Red";
     }
 
     //return actors

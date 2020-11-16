@@ -25,6 +25,10 @@ public class ChannelListing {
          * search up multidimensional arrays ( String[][] allProgrammes)
          *
          * */
+        void aVoid() {
+            Weather t = new Weather();
+
+        }
 
     }
 
