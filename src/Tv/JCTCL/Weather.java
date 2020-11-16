@@ -8,6 +8,7 @@ public class Weather extends Programme {
         length = 0.0f;
         progColour = "White";
         progName = "UNKNOWN";
+        channel = new Channel();
 
         //description = "Unknown"; ***wouldnt need description here
         //caption = "Unknown"; ***should be closedCaption and you would not need it here
@@ -16,11 +17,13 @@ public class Weather extends Programme {
         severityRating = sRating;
         channel = cHannel;
         progName = progNaMe;
+        progColour = "White";
         length = _length; //didnt use _length
     }
     public Weather(Weather _weather) {
         severityRating = _weather.severityRating;
         channel = _weather.channel;
+        progColour = "White";
         progName = _weather.progName;
         length = _weather.length;
     }
