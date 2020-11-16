@@ -1,12 +1,11 @@
 package Tv.JCTCL;
+import javax.swing.*;
+import java.awt.*;
+
 
 public class TvDisplay {
+    public static void main(String[] args) {
 
-    public void function() {
-        Driver driver = new Driver();
-        System.out.println(driver.SpiderMan.getChannel().getChName());
-        System.out.println(driver.SpiderMan.getProgName());
 
     }
-
 }
