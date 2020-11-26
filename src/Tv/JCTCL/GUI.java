@@ -188,13 +188,28 @@ public class GUI {
     private JPanel T5;
     private JPanel progs;
     private JPanel chanNum;
+    private JPanel chanHead;
+    private JPanel colHead;
+    private JPanel list;
+    private JScrollPane scroll1;
+    private JScrollPane scroll2;
+    private JScrollPane scroll3;
 
     private JFrame frame = new JFrame("JCTCL Cable Tv");
+    JViewport view1 = new JViewport();
+    JViewport view2 = new JViewport();
+    JViewport view3 = new JViewport();
 
 
     public GUI(){
 
+        view1.setView(colHead);
+        view2.setView(channels);
+        view3.setView(list);
 
+        scroll1.setViewport(view1);
+        scroll2.setViewport(view2);
+        scroll3.setViewport(view3);
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setUndecorated(true);
