@@ -1,5 +1,5 @@
 //include in Tv.JCTCL package
-package Tv.JCTCL;
+package JCTCLTv;
 
 //create class Channel
 public class Channel{

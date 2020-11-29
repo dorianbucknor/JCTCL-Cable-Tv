@@ -1,4 +1,4 @@
-package Tv.JCTCL;
+package JCTCLTv;
 
 public class Weather extends Programme {
     private int severityRating;

@@ -1,10 +1,8 @@
-package Tv.JCTCL;
+package JCTCLTv;
 
 import javax.swing.*;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.MouseWheelListener;
 
-public class GUI {
+public class GUI extends Listing{
     private JPanel mainPanel;
     private JPanel l1;
     private JPanel l1ch;
@@ -54,11 +52,7 @@ public class GUI {
     private JLabel l2p5l;
     private JPanel l2p5i;
     private JPanel l2p5e;
-    private JPanel heading;
-    private JLabel headLabel;
-    private JLabel day;
-    private JLabel date;
-    private JLabel time;
+    private JPanel top;
     private JPanel l3;
     private JPanel l3ch;
     private JLabel l3chl;
@@ -180,36 +174,33 @@ public class GUI {
     private JPanel l7p5e;
     private JPanel l7p5i;
     private JPanel channels;
-    private JPanel proTPan;
-    private JPanel T1;
-    private JPanel T2;
-    private JPanel T3;
-    private JPanel T4;
-    private JPanel T5;
     private JPanel progs;
     private JPanel chanNum;
-    private JPanel chanHead;
-    private JPanel colHead;
+    private JPanel display;
+    private JLabel time;
+    private JLabel date;
+    private JLabel day;
+    private JPanel datetime;
+    private JLabel jctclhead;
+    private JPanel mainHead;
+    private JPanel header;
+    private JPanel header2;
     private JPanel list;
-    private JScrollPane scroll1;
     private JScrollPane scroll2;
     private JScrollPane scroll3;
 
     private JFrame frame = new JFrame("JCTCL Cable Tv");
-    JViewport view1 = new JViewport();
-    JViewport view2 = new JViewport();
-    JViewport view3 = new JViewport();
-
-
     public GUI(){
 
-        view1.setView(colHead);
-        view2.setView(channels);
-        view3.setView(list);
+        l1p2l.setText(ch1P2.progName);
 
-        scroll1.setViewport(view1);
-        scroll2.setViewport(view2);
-        scroll3.setViewport(view3);
+        l1chl.setText(ch1.getChNumber()+" - "+ch1.getChName());
+        l2chl.setText(ch2.getChNumber()+" - "+ch2.getChName());
+        l3chl.setText(ch3.getChNumber()+" - "+ch3.getChName());
+        l4chl.setText(ch4.getChNumber()+" - "+ch4.getChName());
+        l5chl.setText(ch5.getChNumber()+" - "+ch5.getChName());
+        l6chl.setText(ch6.getChNumber()+" - "+ch6.getChName());
+        l7chl.setText(ch7.getChNumber()+" - "+ch7.getChName());        
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setUndecorated(true);

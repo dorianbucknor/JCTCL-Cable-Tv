@@ -1,5 +1,5 @@
 //include Movie Class in TV.JCTCL package
-package Tv.JCTCL;
+package JCTCLTv;
 
 //create class Movie which is a subclass of Programme class
 public class Movie extends Programme {

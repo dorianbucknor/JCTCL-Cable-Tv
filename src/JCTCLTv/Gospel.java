@@ -1,4 +1,4 @@
-package Tv.JCTCL;
+package JCTCLTv;
 
 public class Gospel extends Programme {
     private String denomination;

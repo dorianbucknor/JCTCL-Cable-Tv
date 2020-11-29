@@ -1,5 +1,4 @@
-//include Programme class in Tv.JCTCL Package
-package Tv.JCTCL;
+package JCTCLTv;
 
 //create class Programme
 public class Programme{

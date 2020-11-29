@@ -1,5 +1,5 @@
 //include in Tv.JCTCL package
-package Tv.JCTCL;
+package JCTCLTv;
 
 //create class News as subclass of Programme
 public class News extends Programme {
