@@ -36,7 +36,7 @@ public class Listing {
     public Programme ch4P5;
 
 
-    public Channel ch5 = new Channel("DISNEY", 204, 5);
+    public Channel ch5 = new Channel("KID", 204, 5);
     public Programme ch5P1;
     public Programme ch5P2;
     public Programme ch5P3;
@@ -57,12 +57,13 @@ public class Listing {
     public Programme ch7P2;
     public Programme ch7P3;
     public Programme ch7P4;
-    public Programme ch7P5;
+    public Comedy ch7P5 = new Comedy(9, "Episode10", new String[]{"Will Smith"});
 
     //put extra info inside brackets
     {
         ch4P1.setProgName("Elmo's World");
         ch6P2.setDescription("The Greatest Movie Ever");
+        ch7P5.setProgName("Fresh Prince");
 
 
     }

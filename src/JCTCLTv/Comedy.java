@@ -34,6 +34,7 @@ public class Comedy extends Programme {
         channel = _comedy.channel;
     }
     public String[] getmActors() {return mActors;}
+
     public String getEpisodeTitle() {return episodeTitle;}
 
     public void setmActors(String[] mActors){this.mActors = mActors;};
