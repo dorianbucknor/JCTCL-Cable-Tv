@@ -4,7 +4,7 @@ package JCTCLTv;
 //create class Movie which is a subclass of Programme class
 public class Movie extends Programme {
     //stores rating of movie
-    private int rating;
+    private float rating;
     //stores the movie release date
     private String releaseDate;
     //stores the actors of the movie
@@ -46,7 +46,7 @@ public class Movie extends Programme {
         return releaseDate;
     }
     //return rating
-    public int getRating() {
+    public float getRating() {
         return rating;
     }
     //set release date

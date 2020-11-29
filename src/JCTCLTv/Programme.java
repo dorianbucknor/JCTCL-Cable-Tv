@@ -1,5 +1,7 @@
 package JCTCLTv;
 
+import java.awt.*;
+
 //create class Programme
 public class Programme{
     //string to store programme name

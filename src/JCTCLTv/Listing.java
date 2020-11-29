@@ -43,7 +43,7 @@ public class Listing {
 
 
     public Channel ch6 = new Channel("DISNEY", 205, 5);
-    public Programme ch6P1;
+    public Programme ch6P1 = new Movie("SpiderMan", 9, "January 10, 2003", new String[]{"Tom Holland"});
     public Programme ch6P2;
     public Programme ch6P3;
     public Programme ch6P4;
