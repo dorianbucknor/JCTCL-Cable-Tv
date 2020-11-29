@@ -1,16 +1,20 @@
 package JCTCLTv;
 
 
+import java.awt.*;
+
 public class Comedy extends Programme {
         private int raTing;
         private String episodeTitle;
 
         private String[] mActors = new String[25];
+    {
+        progColour = Color.YELLOW;
+    }
 
     public Comedy() {
         raTing = 0;
         length = 0.0f;
-        progColour = "Yellow";
         episodeTitle = "Unknown";
         channel = new Channel();
         mActors = new String[25];
@@ -19,14 +23,14 @@ public class Comedy extends Programme {
         raTing = ratIng;
         episodeTitle = episodetitle;
         mActors = aCtors;
-        progColour = "Yellow";
+
     }
     public Comedy(Comedy _comedy) {
         raTing = _comedy.raTing;
         episodeTitle = _comedy.episodeTitle;
         mActors = _comedy.mActors;
         progName = _comedy.progName;
-        progColour = "Yellow";
+
         channel = _comedy.channel;
     }
     public String[] getmActors() {return mActors;}

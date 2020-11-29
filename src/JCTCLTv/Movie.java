@@ -1,6 +1,8 @@
 //include Movie Class in TV.JCTCL package
 package JCTCLTv;
 
+import java.awt.*;
+
 //create class Movie which is a subclass of Programme class
 public class Movie extends Programme {
     //stores rating of movie
@@ -9,6 +11,9 @@ public class Movie extends Programme {
     private String releaseDate;
     //stores the actors of the movie
     private String[] actors = new String[25];
+    {
+        progColour = Color.RED;
+    }
 
     //default constructor
     public Movie(){
@@ -18,7 +23,7 @@ public class Movie extends Programme {
         actors = new String[25];
         progName = "Unknown";
         channel = new Channel();
-        progColour = "Red";
+
     }
     //primary constructor
     public Movie(String _progName, int _rating, String _rDate, String[] _actors) {
@@ -26,7 +31,7 @@ public class Movie extends Programme {
         releaseDate =_rDate;
         actors = _actors;
         progName = _progName;
-        progColour = "Red";
+
     }
     //copy constructor
     public Movie(Movie _movie){
@@ -34,7 +39,7 @@ public class Movie extends Programme {
         releaseDate = _movie.releaseDate;
         actors = _movie.actors;
         channel = _movie.channel;
-        progColour = "Red";
+
     }
 
     //return actors

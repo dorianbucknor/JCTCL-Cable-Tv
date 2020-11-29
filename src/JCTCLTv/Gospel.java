@@ -1,12 +1,17 @@
 package JCTCLTv;
 
+import java.awt.*;
+
 public class Gospel extends Programme {
     private String denomination;
+    {
+        progColour = Color.BLUE;
+    }
 
     //Default constructor for Gospel
     public Gospel(){
         progName = "Unknown";
-        progColour = "Blue";
+
         denomination = "Unknown";
         length = 0.0f;
         channel = new Channel();
@@ -16,12 +21,12 @@ public class Gospel extends Programme {
     public Gospel(String _progName, String _denomination){
         denomination = _denomination;
         progName = _progName;
-        progColour = "Blue";
+
     }
 
     //Copy Constructor
     public  Gospel(Gospel _gospel){
-        progColour = "Blue";
+
         progName = _gospel.progName;
         length = _gospel.length;
         denomination = _gospel.denomination;

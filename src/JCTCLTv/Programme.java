@@ -11,7 +11,7 @@ public class Programme{
     //string to store programme programme show date
     protected String showDate;
     //string to store programme colour
-    protected String progColour;
+    protected Color progColour;
     //string to store programme description
     protected String description;
     //boolean to check if programme is being watched
@@ -37,7 +37,7 @@ public class Programme{
         progName = "Unknown";
         showTime = "Unknown";
         showDate = "Unknown";
-        progColour = "Unknown";
+
         length = 0.0f;
     }
     //primary constructor
@@ -45,7 +45,7 @@ public class Programme{
         progName = _progTime;
         showTime = _showTime;
         showDate = _showDate;
-        progColour = _progColour;
+
         length = _length;
     }
     //copy constructor
@@ -90,11 +90,11 @@ public class Programme{
         this.length = length;
     }
     //set programme colour
-    public void setProgColour(String progColour) {
+    public void setProgColour(Color progColour) {
         this.progColour = progColour;
     }
     //return programme colour
-    public String getProgColour() {
+    public Color getProgColour() {
         return progColour;
     }
     //set programme channel

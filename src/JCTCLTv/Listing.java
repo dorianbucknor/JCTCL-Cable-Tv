@@ -36,7 +36,7 @@ public class Listing {
     public Programme ch4P5;
 
 
-    public Channel ch5 = new Channel("CVM", 204, 5);
+    public Channel ch5 = new Channel("DISNEY", 204, 5);
     public Programme ch5P1;
     public Programme ch5P2;
     public Programme ch5P3;
@@ -44,7 +44,7 @@ public class Listing {
     public Programme ch5P5;
 
 
-    public Channel ch6 = new Channel("DISNEY", 205, 5);
+    public Channel ch6 = new Channel("USA", 205, 5);
     public Programme ch6P1 = new Movie("SpiderMan", 9, "January 10, 2003", new String[]{"Tom Holland"});
     public Programme ch6P2 = new Movie("Iron Man", 10, "January 20, 1999", new String[]{"Robert Downey Jnr."});
     public Programme ch6P3;

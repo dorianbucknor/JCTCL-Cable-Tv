@@ -1,11 +1,11 @@
 package JCTCLTv;
 
 import javax.swing.*;
+import java.awt.*;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -24,8 +24,8 @@ public class GUI extends Listing{
     protected JLabel l1p1l;
     protected JLabel l1chl;
     protected JLabel l1p2l;
-    protected JPanel l1p2e;
     protected JPanel l1p2i;
+    protected JPanel l1p2e;
     protected JLabel l1p3l;
     protected JPanel l1p3i;
     protected JPanel l1p3e;
@@ -199,13 +199,52 @@ public class GUI extends Listing{
     protected JLabel T5;
     protected JPanel _time;
     private JLabel chanHead;
-    private JLabel l6p2d;
-    private JTextField textField1;
+    private JTextField l6p2d;
+    private JTextField l7p5d;
+    private JTextField l7p4d;
+    private JTextField l7p3d;
+    private JTextField l7p2d;
+    private JTextField l7p1d;
+    private JTextField l6p5d;
+    private JTextField l6p4d;
+    private JTextField l6p3d;
+    private JTextField l6p1d;
+    private JTextField l5p5d;
+    private JTextField l5p4d;
+    private JTextField l5p3d;
+    private JTextField l5p2d;
+    private JTextField l5p1d;
+    private JTextField l4p5d;
+    private JTextField l4p4d;
+    private JTextField l4p3d;
+    private JTextField l4p2d;
+    private JTextField l4p1d;
+    private JTextField l3p5d;
+    private JTextField l3p4d;
+    private JTextField l3p3d;
+    private JTextField l3p2d;
+    private JTextField l3p1d;
+    private JTextField l2p5d;
+    private JTextField l2p4d;
+    private JTextField l2p3d;
+    private JTextField l2p2d;
+    private JTextField l2p1d;
+    private JTextField l1p5d;
+    private JTextField l1p4d;
+    private JTextField l1p3d;
+    private JTextField l1p2d;
+    private JTextField l1p1d;
+    private JScrollPane scrollPane;
     protected JPanel list;
     protected JScrollPane scroll2;
     protected JScrollPane scroll3;
 
     protected JFrame frame = new JFrame("JCTCL Cable Tv");
+
+    {
+        l1pp1.setBackground(ch1P1.progColour);
+
+    }
 
     public void TimeDate(){
 
@@ -216,15 +255,26 @@ public class GUI extends Listing{
         day.setText(dFormat.format(new Date()));
         time.setText(_Time);*/
 
-        LocalDateTime date = LocalDateTime.now();
-        LocalDateTime day = LocalDateTime.now();
-        LocalDateTime time = LocalDateTime.now();
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss a");
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
+        DateTimeFormatter tFormatter = DateTimeFormatter.ofPattern("hh:mm a");
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
         DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("EEEE");
-        date.format(dateFormatter);
-        day.format(dayFormatter);
-        time.format(timeFormatter);
+        Clock clock = Clock.tickSeconds(ZoneId.systemDefault());
+        clock.instant();
+
+        LocalDateTime Date = LocalDateTime.now();
+        LocalDateTime Day = LocalDateTime.now();
+        LocalDateTime Time = LocalDateTime.now();
+        LocalDateTime LTime = LocalDateTime.now();
+
+        time.setText(Time.format(timeFormatter));
+        date.setText(Date.format(dateFormatter));
+        day.setText(Day.format(dayFormatter));
+        T1.setText(LTime.minusSeconds(17280).format(tFormatter) + " - " + LTime.format(tFormatter));
+        T2.setText(LTime.format(tFormatter) + " - " + LTime.plusSeconds(17280).format(tFormatter));
+        T3.setText(LTime.plusSeconds(17280).format(tFormatter) + " - " + LTime.plusSeconds(34560).format(tFormatter));
+        T4.setText(LTime.plusSeconds(34560).format(tFormatter) + " - " + LTime.plusSeconds(51840).format(tFormatter));
+        T5.setText(LTime.plusSeconds(51840).format(tFormatter) + " - " + LTime.plusSeconds(69120).format(tFormatter));
 
 
 
@@ -234,21 +284,24 @@ public class GUI extends Listing{
 
         TimeDate();
 
+
         l6p1l.setText(ch6P1.getProgName());
 
         l6p2l.setText(ch6P2.getProgName());
+        l6p2d.setText(ch6P2.getDescription());
+        l6pp1.setBackground(ch6P1.getProgColour());
 
-
+        scrollPane.getVerticalScrollBar().setUnitIncrement(16);
         l1p2l.setText(ch1P2.getProgName());
 
 
-        l1chl.setText(ch1.getChNumber()+" - "+ch1.getChName());
-        l2chl.setText(ch2.getChNumber()+" - "+ch2.getChName());
-        l3chl.setText(ch3.getChNumber()+" - "+ch3.getChName());
-        l4chl.setText(ch4.getChNumber()+" - "+ch4.getChName());
-        l5chl.setText(ch5.getChNumber()+" - "+ch5.getChName());
-        l6chl.setText(ch6.getChNumber()+" - "+ch6.getChName());
-        l7chl.setText(ch7.getChNumber()+" - "+ch7.getChName());
+        l1chl.setText(ch1.getChNumber()+" - "+ch1.getChName() + " ");
+        l2chl.setText(ch2.getChNumber()+" - "+ch2.getChName()+ " ");
+        l3chl.setText(ch3.getChNumber()+" - "+ch3.getChName()+ " ");
+        l4chl.setText(ch4.getChNumber()+" - "+ch4.getChName()+ " ");
+        l5chl.setText(ch5.getChNumber()+" - "+ch5.getChName()+ " ");
+        l6chl.setText(ch6.getChNumber()+" - "+ch6.getChName()+ " ");
+        l7chl.setText(ch7.getChNumber()+" - "+ch7.getChName()+ " ");
 
 
 

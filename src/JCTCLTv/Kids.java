@@ -1,12 +1,17 @@
 package JCTCLTv;
 
+import java.awt.*;
+
 public class Kids extends Programme {
     private String ageRange;
 
+    {
+        progColour = new Color(128,0,128);
+    }
     //Default constructor for Kids
     public Kids() {
         progName = "Unknown";
-        progColour = "Purple";
+
         ageRange = "7-13";
         length = 0.0f;
         channel = new Channel();
@@ -16,11 +21,11 @@ public class Kids extends Programme {
     //Primary constructor for Kids
     public Kids(String _ageRange){
         ageRange = _ageRange;
-        progColour = "Purple";
+
     }
     public Kids(Kids _kids){
         ageRange = _kids.ageRange;
-        progColour = "Purple";
+
         channel = _kids.channel;
     }
 

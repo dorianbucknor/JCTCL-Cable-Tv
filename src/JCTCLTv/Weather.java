@@ -1,24 +1,29 @@
 package JCTCLTv;
 
+import java.awt.*;
+
 public class Weather extends Programme {
     private int severityRating;
+    {
+        progColour = Color.WHITE;
+    }
 
     public Weather() {
         severityRating = 0;
         length = 0.0f;
-        progColour = "White";
+
         progName = "UNKNOWN";
         channel = new Channel();
     }
     public Weather(String progNaMe, int sRating) {
         severityRating = sRating;
         progName = progNaMe;
-        progColour = "White";
+
     }
     public Weather(Weather _weather) {
         severityRating = _weather.severityRating;
         channel = _weather.channel;
-        progColour = "White";
+
         progName = _weather.progName;
         length = _weather.length;
         channel = _weather.channel;
