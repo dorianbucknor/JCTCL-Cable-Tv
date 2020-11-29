@@ -112,23 +112,39 @@
             <properties>
               <background color="-14803363"/>
               <foreground color="-10977284"/>
+              <verifyInputWhenFocusTarget value="true"/>
             </properties>
             <border type="none"/>
             <children>
               <grid id="9f097" layout-manager="BorderLayout" hgap="0" vgap="0">
-                <constraints border-constraint="Center"/>
+                <constraints border-constraint="West"/>
                 <properties>
                   <background color="-14803363"/>
                   <foreground color="-10977284"/>
-                  <visible value="false"/>
+                  <opaque value="false"/>
+                  <visible value="true"/>
                 </properties>
                 <border type="none"/>
-                <children/>
+                <children>
+                  <component id="39a6" class="javax.swing.JLabel" binding="chanHead">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <background color="-14803363"/>
+                      <foreground color="-1709323"/>
+                      <horizontalAlignment value="0"/>
+                      <preferredSize width="130" height="16"/>
+                      <text value="Channel"/>
+                    </properties>
+                  </component>
+                </children>
               </grid>
               <grid id="44c97" binding="_time" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints border-constraint="East"/>
-                <properties/>
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-14803363"/>
+                  <foreground color="-1709323"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <component id="53d6" class="javax.swing.JLabel" binding="T1">
@@ -136,6 +152,8 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
+                      <background color="-14803363"/>
+                      <foreground color="-1709323"/>
                       <text value="Label"/>
                     </properties>
                   </component>
@@ -144,6 +162,8 @@
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
+                      <background color="-14803363"/>
+                      <foreground color="-1709323"/>
                       <text value="Label"/>
                     </properties>
                   </component>
@@ -152,6 +172,8 @@
                       <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
+                      <background color="-14803363"/>
+                      <foreground color="-1709323"/>
                       <text value="Label"/>
                     </properties>
                   </component>
@@ -160,6 +182,8 @@
                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
+                      <background color="-14803363"/>
+                      <foreground color="-1709323"/>
                       <text value="Label"/>
                     </properties>
                   </component>
@@ -168,17 +192,13 @@
                       <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
+                      <background color="-14803363"/>
+                      <foreground color="-1709323"/>
                       <text value="Label"/>
                     </properties>
                   </component>
                 </children>
               </grid>
-              <component id="39a6" class="javax.swing.JLabel">
-                <constraints border-constraint="West"/>
-                <properties>
-                  <text value="Label"/>
-                </properties>
-              </component>
             </children>
           </grid>
         </children>
@@ -195,7 +215,7 @@
             <properties>
               <visible value="true"/>
             </properties>
-            <border type="none"/>
+            <border type="empty"/>
             <children>
               <grid id="c7b61" binding="display" layout-manager="BorderLayout" hgap="0" vgap="0">
                 <constraints/>
@@ -542,7 +562,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="81e9f" binding="l1p1e" layout-manager="GridBagLayout">
+                                  <grid id="81e9f" binding="l1p1e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -551,7 +571,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="95cc6" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -590,7 +621,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="d17f7" binding="l1p2i" layout-manager="GridBagLayout">
+                                  <grid id="d17f7" binding="l1p2i" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -599,7 +630,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="7d7e0" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -638,7 +680,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="a72ce" binding="l1p3e" layout-manager="GridBagLayout">
+                                  <grid id="a72ce" binding="l1p3e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -647,7 +689,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="e690d" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -686,7 +739,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="37e51" binding="l1p4e" layout-manager="GridBagLayout">
+                                  <grid id="37e51" binding="l1p4e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -695,7 +748,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="5fe75" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -734,7 +798,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="3cbb7" binding="l1p5e" layout-manager="GridBagLayout">
+                                  <grid id="3cbb7" binding="l1p5e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -743,7 +807,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="1ed83" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -812,7 +887,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="3abec" binding="l2p1e" layout-manager="GridBagLayout">
+                                  <grid id="3abec" binding="l2p1e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -821,7 +896,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="9cf78" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -860,7 +946,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="a46d9" binding="l2p2e" layout-manager="GridBagLayout">
+                                  <grid id="a46d9" binding="l2p2e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -870,27 +956,16 @@
                                     </properties>
                                     <border type="none"/>
                                     <children>
-                                      <scrollpane id="e96bb">
-                                        <constraints>
-                                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                                          <gridbag weightx="0.0" weighty="0.0"/>
-                                        </constraints>
-                                        <properties/>
-                                        <border type="none"/>
-                                        <children/>
-                                      </scrollpane>
-                                      <hspacer id="7e580">
-                                        <constraints>
-                                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                                          <gridbag weightx="0.0" weighty="0.0"/>
-                                        </constraints>
-                                      </hspacer>
-                                      <vspacer id="bb1d5">
-                                        <constraints>
-                                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                                          <gridbag weightx="0.0" weighty="0.0"/>
-                                        </constraints>
-                                      </vspacer>
+                                      <component id="f4c76" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
                                     </children>
                                   </grid>
                                 </children>
@@ -930,7 +1005,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="6beb1" binding="l2p3e" layout-manager="GridBagLayout">
+                                  <grid id="6beb1" binding="l2p3e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -939,7 +1014,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="e7dd1" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -978,7 +1064,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="8e8f4" binding="l2p4e" layout-manager="GridBagLayout">
+                                  <grid id="8e8f4" binding="l2p4e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -987,7 +1073,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="6fa7b" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1026,7 +1123,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="233f7" binding="l2p5e" layout-manager="GridBagLayout">
+                                  <grid id="233f7" binding="l2p5e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1035,7 +1132,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="6eec8" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1104,7 +1212,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="6072f" binding="l3p1e" layout-manager="GridBagLayout">
+                                  <grid id="6072f" binding="l3p1e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1113,7 +1221,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="76eb9" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1152,7 +1271,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="512a7" binding="l3p2e" layout-manager="GridBagLayout">
+                                  <grid id="512a7" binding="l3p2e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1161,7 +1280,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="12e10" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1200,7 +1330,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="e73ee" binding="l3p3e" layout-manager="GridBagLayout">
+                                  <grid id="e73ee" binding="l3p3e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1209,7 +1339,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="f6f87" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1248,7 +1389,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="963c2" binding="l3p4e" layout-manager="GridBagLayout">
+                                  <grid id="963c2" binding="l3p4e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1257,7 +1398,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="698f" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1296,7 +1448,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="4a045" binding="l3p5e" layout-manager="GridBagLayout">
+                                  <grid id="4a045" binding="l3p5e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1305,7 +1457,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="6c21e" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1374,7 +1537,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="2c2cc" binding="l4p1e" layout-manager="GridBagLayout">
+                                  <grid id="2c2cc" binding="l4p1e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1383,7 +1546,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="b5094" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1422,7 +1596,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="106e5" binding="l4p2e" layout-manager="GridBagLayout">
+                                  <grid id="106e5" binding="l4p2e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1431,7 +1605,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="2a7a8" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1470,7 +1655,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="56be1" binding="l4p3e" layout-manager="GridBagLayout">
+                                  <grid id="56be1" binding="l4p3e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1479,7 +1664,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="5b1ec" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1518,7 +1714,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="79453" binding="l4p4e" layout-manager="GridBagLayout">
+                                  <grid id="79453" binding="l4p4e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1527,7 +1723,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="45236" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1566,7 +1773,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="f49d1" binding="l4p5e" layout-manager="GridBagLayout">
+                                  <grid id="f49d1" binding="l4p5e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1575,7 +1782,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="c3f77" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1644,7 +1862,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="33348" binding="l5p1e" layout-manager="GridBagLayout">
+                                  <grid id="33348" binding="l5p1e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1653,7 +1871,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="a339f" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1692,7 +1921,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="9bf13" binding="l5p2e" layout-manager="GridBagLayout">
+                                  <grid id="9bf13" binding="l5p2e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1701,7 +1930,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="a91dd" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1740,7 +1980,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="37c08" binding="l5p3e" layout-manager="GridBagLayout">
+                                  <grid id="37c08" binding="l5p3e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1749,7 +1989,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="4c6f3" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1788,7 +2039,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="c617" binding="l5p4e" layout-manager="GridBagLayout">
+                                  <grid id="c617" binding="l5p4e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1797,7 +2048,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="51aaa" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1836,7 +2098,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="9be9f" binding="l5p5e" layout-manager="GridBagLayout">
+                                  <grid id="9be9f" binding="l5p5e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1845,7 +2107,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="df443" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1914,7 +2187,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="87457" binding="l6p1e" layout-manager="GridBagLayout">
+                                  <grid id="87457" binding="l6p1e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1923,7 +2196,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="51053" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -1951,7 +2235,7 @@
                                       <text value="Label"/>
                                     </properties>
                                   </component>
-                                  <grid id="cfb0f" binding="l6p2i" layout-manager="GridBagLayout">
+                                  <grid id="cfb0f" binding="l6p2i" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="South"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1962,7 +2246,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="2d78b" binding="l6p2e" layout-manager="GridBagLayout">
+                                  <grid id="2d78b" binding="l6p2e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -1971,7 +2255,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="4146f" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -2010,7 +2305,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="66b66" binding="l6p3e" layout-manager="GridBagLayout">
+                                  <grid id="66b66" binding="l6p3e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -2019,7 +2314,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="ce8f4" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -2058,7 +2364,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="f743" binding="l6p4e" layout-manager="GridBagLayout">
+                                  <grid id="f743" binding="l6p4e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -2067,7 +2373,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="e04a5" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -2106,7 +2423,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="82b60" binding="l6p5e" layout-manager="GridBagLayout">
+                                  <grid id="82b60" binding="l6p5e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -2115,7 +2432,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="2d7b8" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -2184,7 +2512,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="f57e8" binding="l7p1e" layout-manager="GridBagLayout">
+                                  <grid id="f57e8" binding="l7p1e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -2193,7 +2521,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="71f6" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -2232,7 +2571,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="b9c46" binding="l7p2e" layout-manager="GridBagLayout">
+                                  <grid id="b9c46" binding="l7p2e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -2241,7 +2580,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="cfd15" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -2280,7 +2630,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="c219f" binding="l7p3e" layout-manager="GridBagLayout">
+                                  <grid id="c219f" binding="l7p3e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -2289,7 +2639,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="71aa7" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -2328,7 +2689,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="ed661" binding="l7p4e" layout-manager="GridBagLayout">
+                                  <grid id="ed661" binding="l7p4e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -2337,7 +2698,18 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="741f6" class="javax.swing.JTextField" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <editable value="true"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>
@@ -2376,7 +2748,7 @@
                                     <border type="none"/>
                                     <children/>
                                   </grid>
-                                  <grid id="d559" binding="l7p5e" layout-manager="GridBagLayout">
+                                  <grid id="d559" binding="l7p5e" layout-manager="BorderLayout" hgap="0" vgap="0">
                                     <constraints border-constraint="Center"/>
                                     <properties>
                                       <background color="-1709323"/>
@@ -2385,7 +2757,17 @@
                                       <opaque value="true"/>
                                     </properties>
                                     <border type="none"/>
-                                    <children/>
+                                    <children>
+                                      <component id="57756" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+                                        <constraints border-constraint="Center"/>
+                                        <properties>
+                                          <background color="-1709323"/>
+                                          <disabledTextColor color="-1709323"/>
+                                          <foreground color="-65356"/>
+                                          <opaque value="false"/>
+                                        </properties>
+                                      </component>
+                                    </children>
                                   </grid>
                                 </children>
                               </grid>

@@ -1,6 +1,13 @@
 package JCTCLTv;
 
 import javax.swing.*;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
 
 public class GUI extends Listing{
     protected JPanel mainPanel;
@@ -191,15 +198,46 @@ public class GUI extends Listing{
     protected JLabel T4;
     protected JLabel T5;
     protected JPanel _time;
+    private JLabel chanHead;
+    private JLabel l6p2d;
+    private JTextField textField1;
     protected JPanel list;
     protected JScrollPane scroll2;
     protected JScrollPane scroll3;
 
     protected JFrame frame = new JFrame("JCTCL Cable Tv");
+
+    public void TimeDate(){
+
+        /*SimpleDateFormat dtFormat = new SimpleDateFormat("MMMMM dd, yyyy");
+        SimpleDateFormat dFormat = new SimpleDateFormat("EEEEE");
+        SimpleDateFormat tFormat = new SimpleDateFormat("h:mm:ss a");
+        date.setText(dtFormat.format(new Date()));
+        day.setText(dFormat.format(new Date()));
+        time.setText(_Time);*/
+
+        LocalDateTime date = LocalDateTime.now();
+        LocalDateTime day = LocalDateTime.now();
+        LocalDateTime time = LocalDateTime.now();
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss a");
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
+        DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("EEEE");
+        date.format(dateFormatter);
+        day.format(dayFormatter);
+        time.format(timeFormatter);
+
+
+
+    }
+
     public GUI(){
 
+        TimeDate();
 
         l6p1l.setText(ch6P1.getProgName());
+
+        l6p2l.setText(ch6P2.getProgName());
+
 
         l1p2l.setText(ch1P2.getProgName());
 
