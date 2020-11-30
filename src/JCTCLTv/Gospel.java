@@ -19,8 +19,8 @@ public class Gospel extends Programme {
 
     //Primary constructor for Gospel
     public Gospel(String _progName, String _denomination){
-        denomination = _denomination;
         progName = _progName;
+        denomination = _denomination;
 
     }
 

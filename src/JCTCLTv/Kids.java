@@ -19,13 +19,16 @@ public class Kids extends Programme {
     }
 
     //Primary constructor for Kids
-    public Kids(String _ageRange){
+    public Kids(String _progName ,String _ageRange){
+        progName = _progName;
         ageRange = _ageRange;
 
+
     }
+
+    //Copy constructor for Kids
     public Kids(Kids _kids){
         ageRange = _kids.ageRange;
-
         channel = _kids.channel;
     }
 
