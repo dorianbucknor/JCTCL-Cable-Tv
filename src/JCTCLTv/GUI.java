@@ -239,6 +239,12 @@ public class GUI extends Listing{
     private JPanel mainScreen;
     private JProgressBar progressBar;
     private JLabel welcometxt;
+    private JTextField textField1;
+    private JPasswordField passwordField1;
+    private JPanel logIn;
+    private JPanel logInPanel;
+    private JLabel pswdF;
+    private JLabel usrNF;
     protected JPanel list;
     protected JScrollPane scroll2;
     protected JScrollPane scroll3;
@@ -287,6 +293,8 @@ public class GUI extends Listing{
         mainPanel.setLayout(mainLayout);
         mainPanel.add(loadScreen, "Load Screen");
         mainPanel.add(mainScreen, "Main Screen");
+        mainPanel.add(logIn, "Log In");
+
 
         l7p5l.setText(ch7P5.getProgName() + " " + ch7P5.getEpisodeTitle());
 
@@ -323,6 +331,7 @@ public class GUI extends Listing{
         frame.setVisible(true);
 
         LoadScreen();
+        //mainLayout.show(mainPanel, "Log In");
 
     }
 
