@@ -89,7 +89,7 @@ public class TvRemote implements ActionListener, MouseListener, KeyListener {
     }
 
     //
-    public void NewFrame1(){
+    public void View(){
         frame2.setTitle("Watch");
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame2.pack();
@@ -98,7 +98,7 @@ public class TvRemote implements ActionListener, MouseListener, KeyListener {
         frame2.setLocationRelativeTo(null);
     }
 
-    public void NewFrame2(){
+    public void Mark(){
         frame2.setTitle("Yo");
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame2.pack();
@@ -107,117 +107,181 @@ public class TvRemote implements ActionListener, MouseListener, KeyListener {
         frame2.setLocationRelativeTo(null);
     }
 
+    public void Unmark(){
+        frame2.setTitle("Yo");
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.pack();
+        frame2.setSize(100,100);
+        frame2.setVisible(true);
+        frame2.setLocationRelativeTo(null);
+    }
+
+    public void Record(){
+        frame2.setTitle("Yo");
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.pack();
+        frame2.setSize(100,100);
+        frame2.setVisible(true);
+        frame2.setLocationRelativeTo(null);
+    }
+
+    public void Enter(){
+        frame2.setTitle("Yo");
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.pack();
+        frame2.setSize(100,100);
+        frame2.setVisible(true);
+        frame2.setLocationRelativeTo(null);
+    }
+
+
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
         if(e.getSource()==buttons[0]) {
             buttons[0].setBackground(Color.PINK);
-            color_bg=true;
+            Mark();
         }
         if(e.getSource()==buttons[1]) {
             buttons[1].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[2]) {
             buttons[2].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[3]) {
             buttons[3].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[4]) {
             buttons[4].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[5]) {
             buttons[5].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[6]) {
             buttons[6].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[7]) {
             buttons[7].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[8]) {
             buttons[8].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[9]) {
             buttons[9].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[10]) {
             buttons[10].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[11]) {
             buttons[11].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[12]) {
             buttons[12].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[13]) {
             buttons[13].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[14]) {
             buttons[14].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[15]) {
             buttons[15].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[16]) {
             buttons[16].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[17]) {
             buttons[17].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[18]) {
             buttons[18].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[19]) {
             buttons[19].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[20]) {
             buttons[20].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[21]) {
             buttons[21].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[22]) {
             buttons[22].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[23]) {
             buttons[23].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[24]) {
             buttons[24].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[25]) {
             buttons[25].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[26]) {
             buttons[26].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[27]) {
             buttons[27].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[28]) {
             buttons[28].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[29]) {
             buttons[29].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[30]) {
             buttons[30].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[31]) {
             buttons[31].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[32]) {
             buttons[32].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[33]) {
             buttons[33].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[34]) {
             buttons[34].setBackground(Color.PINK);
+            Mark();
         }
         if(e.getSource()==buttons[35]) {
             buttons[35].setBackground(Color.PINK);
+            Mark();
         }
     }
 
@@ -252,6 +316,7 @@ public class TvRemote implements ActionListener, MouseListener, KeyListener {
     public void keyTyped(KeyEvent e) {
         switch (e.getKeyChar()) {
             case 'm':
+                //Mark all button
                 buttons[0].setBackground(Color.PINK);
                 buttons[1].setBackground(Color.PINK);
                 buttons[2].setBackground(Color.PINK);
@@ -288,10 +353,11 @@ public class TvRemote implements ActionListener, MouseListener, KeyListener {
                 buttons[33].setBackground(Color.PINK);
                 buttons[34].setBackground(Color.PINK);
                 buttons[35].setBackground(Color.PINK);
+                Mark();
 
                 break;
             case 'u':
-
+                //Unmark all buttons
                 buttons[0].setBackground(Color.WHITE);
                 buttons[1].setBackground(Color.WHITE);
                 buttons[2].setBackground(Color.WHITE);
@@ -328,32 +394,51 @@ public class TvRemote implements ActionListener, MouseListener, KeyListener {
                 buttons[33].setBackground(Color.WHITE);
                 buttons[34].setBackground(Color.WHITE);
                 buttons[34].setBackground(Color.WHITE);
+                Unmark();
 
                 break;
             case 'v':
-                NewFrame1();
+                View();
                 frame2.add(view);
                 break;
             case 'r':
-                NewFrame2();
+                Record();
                 frame.add(record);
                 break;
             default:
 
 
         }
-        /*switch (e.getKeyCode()) {
-            case 10:
-                System.out.println("Watching");
-                break;
-            default:
 
-        }*/
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
+        switch (e.getKeyCode()) {
+            case 10:
+                //Enter Button
+                Enter();
+                frame.add(record);
+                break;
+            /*case 38:
+                //Move Up
 
+                break;
+            case 40:
+                //Move Down
+
+                break;
+            case 39:
+                //Move Left
+
+                break;
+            case 37:
+                //Move Right
+
+                break;*/
+            default:
+
+        }
     }
 
 
