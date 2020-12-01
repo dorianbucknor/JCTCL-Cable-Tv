@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class TvRemote extends GUI implements ActionListener, MouseListener, KeyListener {
+public class TvRemote implements ActionListener, MouseListener, KeyListener {
 
     int b_number = 35;
     boolean color_bg =false;

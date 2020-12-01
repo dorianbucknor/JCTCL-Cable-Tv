@@ -2,6 +2,7 @@
 package JCTCLTv;
 
 import java.awt.*;
+import java.util.Arrays;
 
 //create class Movie which is a subclass of Programme class
 public class Movie extends Programme {
@@ -69,7 +70,8 @@ public class Movie extends Programme {
 
     //returns details of movie
     @Override
-    public String Details() {
-        return channel.getChName() + channel.getChNumber() + progName + showDate + showTime + description + rating + actors + releaseDate;
+    public String[] Details() {
+        String[] details = {progName, showDate, showTime, description, Float.toString(rating), Arrays.toString(actors), releaseDate};
+        return details;
     }
 }

@@ -37,4 +37,10 @@ public class News extends Programme {
     public void setPeriod(String _period) {
         this.period = _period;
     }
+
+    @Override
+    public String[] Details() {
+        String[] details = {progName, progColour.toString(), showDate, showTime, description, Boolean.toString(hasClosedCaption), period};
+        return details;
+    }
 }

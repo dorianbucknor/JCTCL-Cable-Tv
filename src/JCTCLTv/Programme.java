@@ -148,7 +148,8 @@ public class Programme{
         else{isWatching = true;}
     }
     //returns important information on the programme
-    public String Details(){
-        return channel.getChName() + channel.getChNumber() + progName + showDate + showTime + description;
+    public String[] Details(){
+        String[] details = {progName, progColour.toString(), showDate, showTime, description, Boolean.toString(hasClosedCaption)};
+        return details;
     }
 }
