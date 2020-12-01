@@ -5,7 +5,7 @@ import java.awt.*;
 public class Gospel extends Programme {
     private String denomination;
     {
-        progColour = Color.BLUE;
+        progColour = "Blue";
     }
 
     //Default constructor for Gospel

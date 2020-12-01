@@ -11,7 +11,7 @@ public class General extends Programme{
     }
 
     {
-        progColour = Color.WHITE;
+        progColour = 000000000;
     }
 
     //Primary Constructor for General
@@ -24,5 +24,6 @@ public class General extends Programme{
         progName = _general.progName;
         length = _general.length;
     }
+
 
 }

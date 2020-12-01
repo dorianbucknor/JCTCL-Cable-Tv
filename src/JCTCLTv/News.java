@@ -8,7 +8,7 @@ public class News extends Programme {
     //store news period
     private String period;
     {
-        progColour = Color.white;
+        progColour = "WHITE";
     }
 
     //default constructor
@@ -40,7 +40,7 @@ public class News extends Programme {
 
     @Override
     public String[] Details() {
-        String[] details = {progName, progColour.toString(), showDate, showTime, description, Boolean.toString(hasClosedCaption), period};
+        String[] details = {progName, progColour.toString(), description, Boolean.toString(hasClosedCaption), period};
         return details;
     }
 }

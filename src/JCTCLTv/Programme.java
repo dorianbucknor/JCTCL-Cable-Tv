@@ -11,7 +11,7 @@ public class Programme{
     //string to store programme programme show date
     protected String showDate;
     //string to store programme colour
-    protected Color progColour;
+    protected int progColour;
     //string to store programme description
     protected String description;
     //boolean to check if programme is being watched
@@ -90,11 +90,11 @@ public class Programme{
         this.length = length;
     }
     //set programme colour
-    public void setProgColour(Color progColour) {
-        this.progColour = progColour;
+    public void setProgColour(int rgb) {
+        this.progColour = rgb;
     }
     //return programme colour
-    public Color getProgColour() {
+    public String getProgColour() {
         return progColour;
     }
     //set programme channel

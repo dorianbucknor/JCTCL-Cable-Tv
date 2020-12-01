@@ -48,7 +48,6 @@ public class CsvHandler {
             while ((line = csvReader.readNext()) != null ){
                 if (line != csvReader.readNext()) {
                     List<String[]> data = new ArrayList<>();
-                    data.add(line);
                     if (data.size() == 6) {
                         AllData.add(data.toArray(new String[1][6]));
                         data.clear();

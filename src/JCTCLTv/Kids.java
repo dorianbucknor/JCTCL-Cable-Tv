@@ -7,7 +7,7 @@ public class Kids extends Programme {
     private String ageRange;
 
     {
-        progColour = new Color(128,0,128);
+        progColour = "128,0,128";
     }
     //Default constructor for Kids
     public Kids() {

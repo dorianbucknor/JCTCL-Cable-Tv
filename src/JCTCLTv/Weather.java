@@ -5,7 +5,7 @@ import java.awt.*;
 public class Weather extends Programme {
     private int severityRating;
     {
-        progColour = Color.WHITE;
+        progColour = "WHITE";
     }
 
     public Weather() {

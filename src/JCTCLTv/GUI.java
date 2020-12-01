@@ -14,7 +14,9 @@ import java.time.temporal.TemporalAccessor;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Vector;
+import java.util.*;
 
 public class GUI extends Listing{
     protected JPanel mainPanel;
@@ -248,13 +250,13 @@ public class GUI extends Listing{
     protected JPanel list;
     protected JScrollPane scroll2;
     protected JScrollPane scroll3;
-    protected CardLayout mainLayout = new CardLayout(0,0);
-    private String curCard;
+    protected static CardLayout mainLayout = new CardLayout(0,0);
+    protected static String curCard = "Load Screen";
 
     protected JFrame frame = new JFrame("JCTCL Cable Tv");
 
     {
-        l1pp1.setBackground(ch1P1.progColour);
+        //l1pp1.setBackground(ch1P1.progColour);
 
     }
 
@@ -287,6 +289,12 @@ public class GUI extends Listing{
 
     public GUI(){
 
+        List<String[]> listData = new ArrayList<>();
+
+        listData = CsvHandler.fromFile2(new File("ListingData.csv"));
+        System.out.println(Arrays.deepToString(listData.get(23)));
+       // CsvHandler.toFile(new File("tst.csv"), listData);
+
         TimeDate();
        // progs.setFocusable(true);
 
@@ -300,14 +308,17 @@ public class GUI extends Listing{
         l7p5l.setText(ch7P5.getProgName() + " " + ch7P5.getEpisodeTitle());
 
         l6p1l.setText(ch6P1.getProgName());
-        l6pp1.setBackground(ch6P1.getProgColour());
+        l6pp1.setBackground(new Color(Integer.parseInt(ch6P1.getProgName())));
 
         l6p2l.setText(ch6P2.getProgName());
         l6p2d.setText(ch6P2.getDescription());
-        l6pp2.setBackground(ch6P2.getProgColour());
+        //l6pp2.setBackground(ch6P2.getProgColour());
+
 
 
         scrollPane.getVerticalScrollBar().setUnitIncrement(16);
+        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0,0));
+
         l1p2l.setText(ch1P2.getProgName());
 
 
@@ -323,8 +334,9 @@ public class GUI extends Listing{
 
         logInPanel.add(passwordField1);
 
+
         welcometxt.setVisible(false);
-        frame.setFocusable(true);
+        //frame.setFocusable(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setUndecorated(true);
         frame.add(mainPanel);
@@ -449,7 +461,7 @@ public class GUI extends Listing{
 
         progs.setFocusTraversalPolicy(chanPol);
 
-        FocusAdapter listener = new Control().DisplayController();
+        FocusAdapter listener = new Control().DisplayController(mainPanel);
 
         l1.addFocusListener(listener);
         l2.addFocusListener(listener);

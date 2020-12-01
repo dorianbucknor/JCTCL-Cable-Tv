@@ -13,7 +13,7 @@ public class Movie extends Programme {
     //stores the actors of the movie
     private String[] actors = new String[25];
     {
-        progColour = new Color(255, 0 , 0, 140);
+        progColour = "255, 0 , 0, 140";
     }
 
     //default constructor

@@ -3,6 +3,7 @@ package JCTCLTv;
 
 //
 import java.awt.*;
+import java.util.Arrays;
 
 //
 public class Comedy extends Programme {
@@ -10,7 +11,7 @@ public class Comedy extends Programme {
         private String episodeTitle;
         private String[] mActors = new String[25];
     {
-        progColour = Color.YELLOW;
+        progColour = 255255000;
     }
     //
     public Comedy() {
@@ -19,6 +20,7 @@ public class Comedy extends Programme {
         episodeTitle = "Unknown";
         channel = new Channel();
         mActors = new String[25];
+        new Color(progColour)
     }
 
     //
@@ -61,5 +63,11 @@ public class Comedy extends Programme {
     //
     public void setRaTing(int raTing) {
         this.raTing = raTing;
+    }
+
+    @Override
+    public String[] Details() {
+        String[] details = {progName, progColour, episodeTitle, description, Float.toString(raTing), Arrays.toString(mActors)};
+        return details;
     }
 }

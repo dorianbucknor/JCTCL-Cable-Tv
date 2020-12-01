@@ -1,0 +1,321 @@
+
+
+        KeyAdapter listener2 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                switch (e.getKeyCode()){
+                    case 37:
+                        if(e.getComponent().hasFocus()) ){
+
+                        }
+                        break;
+                    case 38:
+
+                        break;
+                    case 39:
+
+                        break;
+                    case 40:
+
+                        break;
+                    default:
+                        System.out.println("No Input");
+                        break;
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyReleased(e);
+            }
+        };
+        l1pp1.addKeyListener(listener2);
+        l1pp2.addKeyListener(listener2);
+        l1pp3.addKeyListener(listener2);
+        l1pp4.addKeyListener(listener2);
+        l1pp5.addKeyListener(listener2);
+        l2pp1.addKeyListener(listener2);
+        l2pp2.addKeyListener(listener2);
+        l2pp3.addKeyListener(listener2);
+        l2pp4.addKeyListener(listener2);
+        l2pp5.addKeyListener(listener2);
+        l3pp1.addKeyListener(listener2);
+        l3pp2.addKeyListener(listener2);
+        l3pp3.addKeyListener(listener2);
+        l3pp4.addKeyListener(listener2);
+        l3pp5.addKeyListener(listener2);
+        l4pp1.addKeyListener(listener2);
+        l4pp2.addKeyListener(listener2);
+        l4pp3.addKeyListener(listener2);
+        l4pp4.addKeyListener(listener2);
+        l4pp5.addKeyListener(listener2);
+        l5pp1.addKeyListener(listener2);
+        l5pp2.addKeyListener(listener2);
+        l5pp3.addKeyListener(listener2);
+        l5pp4.addKeyListener(listener2);
+        l5pp5.addKeyListener(listener2);
+        l6pp1.addKeyListener(listener2);
+        l6pp2.addKeyListener(listener2);
+        l6pp3.addKeyListener(listener2);
+        l6pp4.addKeyListener(listener2);
+        l6pp5.addKeyListener(listener2);
+        l7pp1.addKeyListener(listener2);
+        l7pp2.addKeyListener(listener2);
+        l7pp3.addKeyListener(listener2);
+        l7pp4.addKeyListener(listener2);
+        l7pp5.addKeyListener(listener2);
+
+
+
+
+        FocusAdapter listener4 = new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                KeyAdapter listener3 = new KeyAdapter() {
+                    @Override
+                    public void keyTyped(KeyEvent e) {
+                        super.keyTyped(e);
+                    }
+
+                    @Override
+                    public void keyPressed(KeyEvent k) {
+                        if (e.getComponent().hasFocus()) {
+                            switch (k.getKeyCode()) {
+                                case 38:
+
+                                        break;
+                                case 40:
+
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+
+                };
+                l1.addKeyListener(listener3);
+                l2.addKeyListener(listener3);
+                l3.addKeyListener(listener3);
+                l4.addKeyListener(listener3);
+                l5.addKeyListener(listener3);
+                l6.addKeyListener(listener3);
+                l7.addKeyListener(listener3);
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                super.focusLost(e);
+            }
+        };
+        l1.addFocusListener(listener4);
+        l2.addFocusListener(listener4);
+        l3.addFocusListener(listener4);
+        l4.addFocusListener(listener4);
+        l5.addFocusListener(listener4);
+        l6.addFocusListener(listener4);
+        l7.addFocusListener(listener4);
+        progs.addFocusListener(new FocusAdapter() {
+        });
+    }\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    FocusAdapter listener = new FocusAdapter() {
+            };
+            l1pp1.addFocusListener(listener);
+            l1pp2.addFocusListener(listener);
+            l1pp3.addFocusListener(listener);
+            l1pp4.addFocusListener(listener);
+            l1pp5.addFocusListener(listener);
+            FocusAdapter listener1 = new FocusAdapter() {
+                boolean isFocused = false;
+                Color originalColor;
+
+                @Override
+                public void focusGained(FocusEvent e) {
+                    if (!isFocused) {
+                        // set background to a darker color to indicate focus
+                        originalColor = e.getComponent().getBackground();
+                        e.getComponent().setBackground(originalColor.darker());
+
+                        isFocused = true;
+                    }
+                }
+
+                @Override
+                public void focusLost(FocusEvent e) {
+                    e.getComponent().setBackground(originalColor);
+                    isFocused = false;
+                }
+            };
+            l1pp1.addFocusListener(listener1);
+            l1pp2.addFocusListener(listener1);
+            l1pp3.addFocusListener(listener1);
+            l1pp4.addFocusListener(listener1);
+            l1pp5.addFocusListener(listener1);
+            l2pp1.addFocusListener(listener1);
+            l2pp2.addFocusListener(listener1);
+            l2pp3.addFocusListener(listener1);
+            l2pp4.addFocusListener(listener1);
+            l2pp5.addFocusListener(listener1);
+            l3pp1.addFocusListener(listener1);
+            l3pp2.addFocusListener(listener1);
+            l3pp3.addFocusListener(listener1);
+            l3pp4.addFocusListener(listener1);
+            l3pp5.addFocusListener(listener1);
+            l4pp1.addFocusListener(listener1);
+            l4pp2.addFocusListener(listener1);
+            l4pp3.addFocusListener(listener1);
+            l4pp4.addFocusListener(listener1);
+            l4pp5.addFocusListener(listener1);
+            l5pp1.addFocusListener(listener1);
+            l5pp2.addFocusListener(listener1);
+            l5pp3.addFocusListener(listener1);
+            l5pp4.addFocusListener(listener1);
+            l5pp5.addFocusListener(listener1);
+            l6pp1.addFocusListener(listener1);
+            l6pp2.addFocusListener(listener1);
+            l6pp3.addFocusListener(listener1);
+            l6pp4.addFocusListener(listener1);
+            l6pp5.addFocusListener(listener1);
+            l7pp1.addFocusListener(listener1);
+            l7pp2.addFocusListener(listener1);
+            l7pp3.addFocusListener(listener1);
+            l7pp4.addFocusListener(listener1);
+            l7pp5.addFocusListener(listener1);
+
+           /* progs.setFocusable(true);
+            progs.addKeyListener(new KeyAdapter() {
+                @Override
+                public void keyTyped(KeyEvent k) {
+                    switch (k.getKeyCode()){
+                        case 37:
+                            new FocusEvent();
+                            break;
+                        case 38:
+
+                            break;
+                        case 39:
+
+                            break;
+                        case 40:
+
+                            break;
+                        default:
+                            System.out.println("No Input");
+                            break;
+                    }
+
+                    System.out.println(k.getKeyChar());
+                }
+            });*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Vector<Component> chanOrder = new Vector<>(7);
+        chanOrder.add(l1);
+        chanOrder.add(l2);
+        chanOrder.add(l3);
+        chanOrder.add(l4);
+        chanOrder.add(l5);
+        chanOrder.add(l6);
+        chanOrder.add(l7);
+
+        CustomTraversalPolicy chanPol = new CustomTraversalPolicy(chanOrder);
+
+        /*Vector<Component> l1Com = new Vector<>(5);
+        l1Com.add(l1pp1);
+        l1Com.add(l1pp2);
+        l1Com.add(l1pp3);
+        l1Com.add(l1pp4);
+        l1Com.add(l1pp5);
+        Vector<Component> l2Com = new Vector<>(5);
+        l2Com.add(l2pp1);
+        l2Com.add(l2pp2);
+        l2Com.add(l2pp3);
+        l2Com.add(l2pp4);
+        l2Com.add(l2pp5);
+        Vector<Component> l3Com = new Vector<>(5);
+        l3Com.add(l3pp1);
+        l3Com.add(l3pp2);
+        l3Com.add(l3pp3);
+        l3Com.add(l3pp4);
+        l3Com.add(l3pp5);
+        Vector<Component> l4Com = new Vector<>(5);
+        l4Com.add(l4pp1);
+        l4Com.add(l4pp2);
+        l4Com.add(l4pp3);
+        l4Com.add(l4pp4);
+        l4Com.add(l4pp5);
+        Vector<Component> l5Com = new Vector<>(5);
+        l5Com.add(l5pp1);
+        l5Com.add(l5pp2);
+        l5Com.add(l5pp3);
+        l5Com.add(l5pp4);
+        l5Com.add(l5pp5);
+        Vector<Component> l6Com = new Vector<>(5);
+        l6Com.add(l6pp1);
+        l6Com.add(l6pp2);
+        l6Com.add(l6pp3);
+        l6Com.add(l6pp4);
+        l6Com.add(l6pp5);
+        Vector<Component> l7Com = new Vector<>(5);
+        l7Com.add(l7pp1);
+        l7Com.add(l7pp2);
+        l7Com.add(l7pp3);
+        l7Com.add(l7pp4);
+        l7Com.add(l7pp5);
+
+        CustomTraversalPolicy l1Pol = new CustomTraversalPolicy(l1Com);
+        CustomTraversalPolicy l2Pol = new CustomTraversalPolicy(l2Com);
+        CustomTraversalPolicy l3Pol = new CustomTraversalPolicy(l3Com);
+        CustomTraversalPolicy l4Pol = new CustomTraversalPolicy(l4Com);
+        CustomTraversalPolicy l5Pol = new CustomTraversalPolicy(l5Com);
+        CustomTraversalPolicy l6Pol = new CustomTraversalPolicy(l6Com);
+        CustomTraversalPolicy l7Pol = new CustomTraversalPolicy(l7Com);*/
+
+        progs.setFocusTraversalPolicy(chanPol);
+       /* l1.setFocusTraversalPolicy(l1Pol);
+        l2.setFocusTraversalPolicy(l2Pol);
+        l3.setFocusTraversalPolicy(l3Pol);
+        l4.setFocusTraversalPolicy(l4Pol);
+        l5.setFocusTraversalPolicy(l5Pol);
+        l6.setFocusTraversalPolicy(l6Pol);
+        l7.setFocusTraversalPolicy(l7Pol);*/
