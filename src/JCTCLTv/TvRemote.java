@@ -89,7 +89,7 @@ public class TvRemote extends GUI implements ActionListener, MouseListener, KeyL
     }
 
     //
-    public void NewFrame1(){
+    public void View(){
         frame2.setTitle("Watch");
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame2.pack();
@@ -98,7 +98,7 @@ public class TvRemote extends GUI implements ActionListener, MouseListener, KeyL
         frame2.setLocationRelativeTo(null);
     }
 
-    public void NewFrame2(){
+    public void Mark(){
         frame2.setTitle("Yo");
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame2.pack();
@@ -106,6 +106,17 @@ public class TvRemote extends GUI implements ActionListener, MouseListener, KeyL
         frame2.setVisible(true);
         frame2.setLocationRelativeTo(null);
     }
+
+    public void Enter(){
+        frame2.setTitle("Yo");
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.pack();
+        frame2.setSize(100,100);
+        frame2.setVisible(true);
+        frame2.setLocationRelativeTo(null);
+    }
+
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -331,29 +342,47 @@ public class TvRemote extends GUI implements ActionListener, MouseListener, KeyL
 
                 break;
             case 'v':
-                NewFrame1();
+                View();
                 frame2.add(view);
                 break;
             case 'r':
-                NewFrame2();
+                Mark();
                 frame.add(record);
                 break;
             default:
 
 
         }
-        /*switch (e.getKeyCode()) {
-            case 10:
-                System.out.println("Watching");
-                break;
-            default:
 
-        }*/
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
+        switch (e.getKeyCode()) {
+            case 10:
+                //Enter Button
+                Enter();
+                frame.add(record);
+                break;
+            case 38:
+                //Move Up
 
+                break;
+            case 40:
+                //Move Down
+
+                break;
+            case 39:
+                //Move Left
+
+                break;
+            case 37:
+                //Move Right
+
+                break;
+            default:
+
+        }
     }
 
 
