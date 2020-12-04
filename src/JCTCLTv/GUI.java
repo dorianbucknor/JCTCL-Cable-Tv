@@ -1,6 +1,7 @@
 package JCTCLTv;//this package
 //import all necessary java files
 import javax.swing.*;
+import javax.swing.plaf.basic.BasicScrollPaneUI;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
@@ -45,7 +46,7 @@ public class GUI extends Listing{
     private JPanel header2;
     private JLabel chanHead;
     private JPanel _time;
-    private JTextField l6p2d;
+    private JTextArea l6p2d;
     private JScrollPane scrollPane;
     private JPanel display;
     private JPanel channels;
@@ -61,183 +62,148 @@ public class GUI extends Listing{
     private JPanel l1;
     private JLabel l1p1l;
     private JPanel l1p1i;
-    private JPanel l1p1e;
-    private JTextField l1p1d;
+    private JTextArea l1p1d;
     private JPanel l1pp2;
     private JPanel l1p2i;
-    private JPanel l1p2e;
-    private JTextField l1p2d;
+    private JTextArea l1p2d;
     private JPanel l1pp3;
     private JLabel l1p3l;
     private JPanel l1p3i;
-    private JPanel l1p3e;
-    private JTextField l1p3d;
+    private JTextArea l1p3d;
     private JPanel l1pp4;
     private JLabel l1p4l;
     private JPanel l1p4i;
-    private JPanel l1p4e;
-    private JTextField l1p4d;
+    private JTextArea l1p4d;
     private JPanel l1pp5;
     private JLabel l1p5l;
     private JPanel l1p5i;
-    private JPanel l1p5e;
-    private JTextField l1p5d;
+    private JTextArea l1p5d;
     private JPanel l2;
     private JPanel l2pp1;
     private JLabel l2p1l;
     private JPanel l2p1i;
-    private JPanel l2p1e;
-    private JTextField l2p1d;
+    private JTextArea l2p1d;
     private JPanel l2pp2;
     private JLabel l2p2l;
     private JPanel l2p2i;
-    private JPanel l2p2e;
-    private JTextField l2p2d;
+    private JTextArea l2p2d;
     private JPanel l2pp3;
     private JLabel l2p3l;
     private JPanel l2p3i;
-    private JPanel l2p3e;
-    private JTextField l2p3d;
+    private JTextArea l2p3d;
     private JPanel l2pp4;
     private JLabel l2p4l;
     private JPanel l2p4i;
-    private JPanel l2p4e;
-    private JTextField l2p4d;
+    private JTextArea l2p4d;
     private JPanel l2pp5;
     private JLabel l2p5l;
     private JPanel l2p5i;
-    private JPanel l2p5e;
-    private JTextField l2p5d;
+    private JTextArea l2p5d;
     private JPanel l3;
     private JPanel l3pp1;
     private JLabel l3p1l;
     private JPanel l3p1i;
-    private JPanel l3p1e;
-    private JTextField l3p1d;
+    private JTextArea l3p1d;
     private JPanel l3pp2;
     private JLabel l3p2l;
     private JPanel l3p2i;
-    private JPanel l3p2e;
-    private JTextField l3p2d;
+    private JTextArea l3p2d;
     private JPanel l3pp3;
     private JLabel l3p3l;
     private JPanel l3p3i;
-    private JPanel l3p3e;
-    private JTextField l3p3d;
+    private JTextArea l3p3d;
     private JPanel l3pp4;
     private JLabel l3p4l;
     private JPanel l3p4i;
-    private JPanel l3p4e;
-    private JTextField l3p4d;
+    private JTextArea l3p4d;
     private JPanel l3pp5;
     private JLabel l3p5l;
     private JPanel l3p5i;
-    private JPanel l3p5e;
-    private JTextField l3p5d;
+    private JTextArea l3p5d;
     private JPanel l4;
     private JPanel l4pp1;
     private JLabel l4p1l;
     private JPanel l4p1i;
-    private JPanel l4p1e;
-    private JTextField l4p1d;
+    private JTextArea l4p1d;
     private JPanel l4pp2;
     private JLabel l4p2l;
     private JPanel l4p2i;
-    private JPanel l4p2e;
-    private JTextField l4p2d;
+    private JTextArea l4p2d;
     private JPanel l4pp3;
     private JLabel l4p3l;
     private JPanel l4p3i;
-    private JPanel l4p3e;
-    private JTextField l4p3d;
+    private JTextArea l4p3d;
     private JPanel l4pp4;
     private JLabel l4p4l;
     private JPanel l4p4i;
-    private JPanel l4p4e;
-    private JTextField l4p4d;
+    private JTextArea l4p4d;
     private JPanel l4pp5;
     private JLabel l4p5l;
     private JPanel l4p5i;
-    private JPanel l4p5e;
-    private JTextField l4p5d;
+    private JTextArea l4p5d;
     private JPanel l5;
     private JPanel l5pp1;
     private JLabel l5p1l;
     private JPanel l5p1i;
-    private JPanel l5p1e;
-    private JTextField l5p1d;
+    private JTextArea l5p1d;
     private JPanel l5pp2;
     private JLabel l5p2l;
     private JPanel l5p2i;
-    private JPanel l5p2e;
-    private JTextField l5p2d;
+    private JTextArea l5p2d;
     private JPanel l5pp3;
     private JLabel l5p3l;
     private JPanel l5p3i;
-    private JPanel l5p3e;
-    private JTextField l5p3d;
+    private JTextArea l5p3d;
     private JPanel l5pp4;
     private JLabel l5p4l;
     private JPanel l5p4i;
-    private JPanel l5p4e;
-    private JTextField l5p4d;
+    private JTextArea l5p4d;
     private JPanel l5pp5;
     private JLabel l5p5l;
     private JPanel l5p5i;
-    private JPanel l5p5e;
-    private JTextField l5p5d;
+    private JTextArea l5p5d;
     private JPanel l6;
     private JPanel l6p1i;
-    private JPanel l6p1e;
-    private JTextField l6p1d;
+    private JTextArea l6p1d;
     private JPanel l6p2i;
-    private JPanel l6p2e;
     private JPanel l6pp3;
     private JLabel l6p3l;
     private JPanel l6p3i;
-    private JPanel l6p3e;
-    private JTextField l6p3d;
+    private JTextArea l6p3d;
     private JPanel l6pp4;
     private JLabel l6p4l;
     private JPanel l6p4i;
-    private JPanel l6p4e;
-    private JTextField l6p4d;
+    private JTextArea l6p4d;
     private JPanel l6pp5;
     private JLabel l6p5l;
     private JPanel l6p5i;
-    private JPanel l6p5e;
-    private JTextField l6p5d;
+    private JTextArea l6p5d;
     private JPanel l7;
     private JPanel l7pp1;
     private JLabel l7p1l;
     private JPanel l7p1i;
-    private JPanel l7p1e;
-    private JTextField l7p1d;
+    private JTextArea l7p1d;
     private JPanel l7pp2;
     private JLabel l7p2l;
     private JPanel l7p2i;
-    private JPanel l7p2e;
-    private JTextField l7p2d;
+    private JTextArea l7p2d;
     private JPanel l7pp3;
     private JLabel l7p3l;
     private JPanel l7p3i;
-    private JPanel l7p3e;
-    private JTextField l7p3d;
+    private JTextArea l7p3d;
     private JPanel l7pp4;
     private JLabel l7p4l;
     private JPanel l7p4i;
-    private JPanel l7p4e;
-    private JTextField l7p4d;
+    private JTextArea l7p4d;
     private JPanel l7pp5;
     private JPanel l7p5i;
-    private JPanel l7p5e;
-    private JTextField l7p5d;
+    private JTextArea l7p5d;
     private JPanel loadScreen;
     private JPanel mainScreen;
     private JProgressBar progressBar;
     private JLabel welcometxt;
-    private JTextField textField1;
-    private JPasswordField pswField = new JPasswordField();
+    private JTextField usrnm;
+    private JPasswordField pswField;
     private JPanel logIn;
     private JPanel logInPanel;
     private JLabel pswdF;
@@ -261,12 +227,11 @@ public class GUI extends Listing{
 
         l7p5l.setText(ch7P5.getProgName() + " " + ch7P5.getEpisodeTitle());
 
-        l6p1l.setText(ch6P1.getProgName());
-        l6p2l.setText(ch6P2.getProgName());
-        l6p2d.setText(ch6P2.getDescription());
         scrollPane.getVerticalScrollBar().setUnitIncrement(16);
         scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0,0));
-        l1p2l.setText(ch1P2.getProgName());
+        scrollPane.getHorizontalScrollBar().setUnitIncrement(16);
+        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0,0));
+
 
         l1chl.setText(ch1.getChNumber()+" - "+ch1.getChName() + " ");
         l2chl.setText(ch2.getChNumber()+" - "+ch2.getChName()+ " ");
@@ -277,36 +242,20 @@ public class GUI extends Listing{
         l7chl.setText(ch7.getChNumber()+" - "+ch7.getChName()+ " ");
 
         pswField.setEchoChar('*');
-        logInPanel.add(pswField);
 
         welcometxt.setVisible(false);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setUndecorated(true);
         frame.add(mainPanel);
-        frame.setSize(700, 300);
         frame.setLocationRelativeTo(null);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
-
-        //add key listner for user input
-        frame.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyPressed(KeyEvent e) {
-                if(e.getKeyCode() == 81){
-                    System.out.println("Q Pressed");
-                    mainLayout.show(mainPanel, "Log In");
-                    curCard = "Log In";
-                }else{
-                    System.out.println("NOOOOOOO");
-                }
-                System.out.println(e.getKeyChar());
-            }
-        });
 
         LoadScreen();
         TimeDate();
         ListingCon();
         ViewPrograms();
+        l1pp1.requestFocus();
     }
 
     //this method creates and control how the user is able to traverse through the programme listing
@@ -317,12 +266,10 @@ public class GUI extends Listing{
         Set<KeyStroke> upKeys = new HashSet<KeyStroke>();
         Set<KeyStroke> downKeys = new HashSet<KeyStroke>();
 
-        forwardKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_D, 0));
-        backwardKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_A, 0));
-        upKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_W, 0));
-        downKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_S, 0));
-
-        l1pp1.requestFocus();
+        forwardKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_RIGHT, 0));
+        backwardKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_LEFT, 0));
+        upKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_UP, 0));
+        downKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_DOWN, 0));
 
         progs.setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, forwardKeys);
         progs.setFocusTraversalKeys(KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, backwardKeys);
@@ -423,7 +370,7 @@ public class GUI extends Listing{
 
         CustomTraversalPolicy chanPol = new CustomTraversalPolicy(chanOrder);
         progs.setFocusTraversalPolicy(chanPol);
-        FocusAdapter listener = new Control().DisplayController(mainPanel);
+        FocusAdapter listener = new Control().DisplayController(mainPanel, frame);
 
         l1.addFocusListener(listener);
         l2.addFocusListener(listener);
@@ -467,6 +414,9 @@ public class GUI extends Listing{
         l7pp3.addFocusListener(listener);
         l7pp4.addFocusListener(listener);
         l7pp5.addFocusListener(listener);
+
+
+        AssignData();
     }
 
     //controls the time and displayed on gui
@@ -495,50 +445,47 @@ public class GUI extends Listing{
     }
     //log in controller to view programme listing file
     public void ViewPrograms(){
-        pswField.requestFocus();
-        pswField.addKeyListener(new KeyAdapter() {
+        //
+        KeyAdapter cred = new KeyAdapter() {
             char[] psd = {'q','w','e','r','t','y'};
-            char[] passw = pswField.getPassword();
-            {
-                System.out.println("here1");
-            }
+
             @Override
             public void keyPressed(KeyEvent e) {
-                pswField.setFocusable(true);
-                System.out.println("here2");
-
-                if(e.getKeyCode() == 10 ) {
-                    if (Arrays.equals(passw, psd)) {
-                        JOptionPane.showMessageDialog(logInPanel, "Hello World.");
-                        System.out.println("Hello World");
-                        System.out.println("here3");
-
+                if(e.getKeyCode() == 10) {
+                    if (Arrays.equals(pswField.getPassword(), psd)) {
+                        JOptionPane.showMessageDialog(logInPanel, "Hello, "+usrnm.getText()+". File Loading...");
                         try {
-                            File file = new File("Records.csv");
+                            File file = new File("ListingData.csv");
                             if (!Desktop.isDesktopSupported())//check if Desktop is supported by Platform or not
                             {
                                 System.out.println("not supported");
                                 return;
                             }
                             Desktop desktop = Desktop.getDesktop();
-                            if (file.exists())         //checks file exists or not
-                                desktop.open(file);              //opens the specified file
+                            if (file.exists()) {      //checks file exists or not
+                                desktop.open(file);
+
+                                mainLayout.show(mainPanel, "Main Screen");
+                                progs.setFocusable(true);
+                                curCard = "Main Screen";
+                            }
                         } catch (Exception i) {
                             i.printStackTrace();
                         }
                     }
                     else {
-                        JOptionPane.showMessageDialog(logInPanel, "Incorrect Password! Please Enter A Valid Pasword To Continue.");
+                        JOptionPane.showMessageDialog(logInPanel, "Incorrect Password! Please Enter A Valid Password To Continue.");
                     }
                 }
                 if(e.getKeyCode() == 27){
-                    pswField.setFocusable(false);
-                    //frame.setFocusable(true);
                     mainLayout.show(mainPanel, "Main Screen");
                     curCard = "Main Screen";
                 }
             }
-        });
+        };
+        logInPanel.addKeyListener(cred);
+        pswField.addKeyListener(cred);
+        usrnm.addKeyListener(cred);
     }
 
     //creates and controls a modern looking load screen
@@ -575,8 +522,9 @@ public class GUI extends Listing{
                 }
             }
         }
+
     }
-    //import and register cutom font used in GUI
+    //import and register custom font used in GUI
     public static void Fonts()
     {
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -594,25 +542,217 @@ public class GUI extends Listing{
             System.out.println("Unexpected exception loading fonts"+ ex);
         }
     }
+    public void setColors(String color, Component pan){
+        switch (color){
+            case "Blue":
+                pan.setBackground(new Color(0,0,255,50));
+                break;
+            case "Green":
+                pan.setBackground(new Color(0,255,0,50));
+                break;
+            case "White":
+                pan.setBackground(new Color(255,255,255,100));
+                break;
+            case "Red":
+                pan.setBackground(new Color(255,0,0,50));
+                break;
+            case "Purple":
+                pan.setBackground(new Color(200,0,200,50));
+                break;
+            case "Yellow":
+                pan.setBackground(new Color(255,255,0,50));
+                break;
+            default:
+                pan.setBackground(Color.WHITE);
+                break;
+        }
+    }
 
     public void AssignData(){
 
-      //  String name;
-        int chP = 0;
-        int pgP = 0;
+        String[] data = null;
 
+        for (int p = 0; p < 7; p++) {
+            for(int q = 0; q < 5; q++){
+             String srcval =  "ch"+Integer.toString(p+1)+"P"+Integer.toString(q+1);
+            data = CsvHandler.getData(srcval, "ListingData.csv");
+            if (data[0].equals(l1pp1.getName())) {
+                l1p1l.setText(data[1]);
+                l1p1d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l1pp1);
+            }
+            if (data[0].equals(l1pp2.getName())) {
+                l1p2l.setText(data[1]);
+                l1p2d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l1pp2);
+            }
+            if (data[0].equals(l1pp3.getName())) {
+                l1p3l.setText(data[1]);
+                l1p3d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l1pp3);
+            }
+            if (data[0].equals(l1pp4.getName())) {
+                l1p4l.setText(data[1]);
+                l1p4d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l1pp4);
+            }
+            if (data[0].equals(l1pp5.getName())) {
+                l1p5l.setText(data[1]);
+                l1p5d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l1pp5);
+            }
+            if (data[0].equals(l2pp1.getName())) {
+                l2p1l.setText(data[1]);
+                l2p1d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l2pp1);
 
-        String srcval =  "ch"+Integer.toString(chP)+"P"+Integer.toString(pgP);
+            }
+            if (data[0].equals(l2pp2.getName())) {
+                l2p2l.setText(data[1]);
+                l2p2d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l2pp2);
 
-        List<String> data;
-
-
-
-        //Filehandler.getRecord();
+            }
+            if (data[0].equals(l2pp3.getName())) {
+                l2p3l.setText(data[1]);
+                l2p3d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l2pp3);
+            }
+            if (data[0].equals(l2pp4.getName())) {
+                l2p4l.setText(data[1]);
+                l2p4d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l2pp4);
+            }
+            if (data[0].equals(l2pp5.getName())) {
+                l2p5l.setText(data[1]);
+                l2p5d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l2pp5);
+            }
+            if (data[0].equals(l3pp1.getName())) {
+                l3p1l.setText(data[1]);
+                l3p1d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l3pp1);
+            }
+            if (data[0].equals(l3pp2.getName())) {
+                l3p2l.setText(data[1]);
+                l3p2d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l3pp2);
+            }
+            if (data[0].equals(l3pp3.getName())) {
+                l3p3l.setText(data[1]);
+                l3p3d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l3pp3);
+            }
+            if (data[0].equals(l3pp4.getName())) {
+                l3p4l.setText(data[1]);
+                l3p4d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l3pp4);
+            }
+            if (data[0].equals(l3pp5.getName())) {
+                l3p5l.setText(data[1]);
+                l3p5d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l3pp5);
+            }
+            if (data[0].equals(l4pp1.getName())) {
+                l4p1l.setText(data[1]);
+                l4p1d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l4pp1);
+            }
+            if (data[0].equals(l4pp2.getName())) {
+                l4p2l.setText(data[1]);
+                l4p2d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l4pp2);
+            }
+            if (data[0].equals(l4pp3.getName())) {
+                l4p3l.setText(data[1]);
+                l4p3d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l4pp3);
+            }
+            if (data[0].equals(l4pp4.getName())) {
+                l4p4l.setText(data[1]);
+                l4p4d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l4pp4);
+            }
+            if (data[0].equals(l4pp5.getName())) {
+                l4p5l.setText(data[1]);
+                l4p5d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l4pp5);
+            }
+            if (data[0].equals(l5pp1.getName())) {
+                l5p1l.setText(data[1]);
+                l5p1d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l5pp1);
+            }
+            if (data[0].equals(l5pp2.getName())) {
+                l5p2l.setText(data[1]);
+                l5p2d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l5pp2);
+            }
+            if (data[0].equals(l5pp3.getName())) {
+                l5p3l.setText(data[1]);
+                l5p3d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l5pp3);
+            }
+            if (data[0].equals(l5pp4.getName())) {
+                l5p4l.setText(data[1]);
+                l5p4d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l5pp4);
+            }
+            if (data[0].equals(l5pp5.getName())) {
+                l5p5l.setText(data[1]);
+                l5p5d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l5pp5);
+            }
+            if (data[0].equals(l6pp1.getName())) {
+                l6p1l.setText(data[1]);
+                l6p1d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l6pp1);
+            }
+            if (data[0].equals(l6pp2.getName())) {
+                l6p2l.setText(data[1]);
+                l6p2d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l6pp2);
+            }
+            if (data[0].equals(l6pp3.getName())) {
+                l6p3l.setText(data[1]);
+                l6p3d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l6pp3);
+            }
+            if (data[0].equals(l6pp4.getName())) {
+                l6p4l.setText(data[1]);
+                l6p4d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l6pp4);
+            }
+            if (data[0].equals(l6pp5.getName())) {
+                l6p5l.setText(data[1]);
+                l6p5d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l6pp5);
+            }
+            if (data[0].equals(l7pp1.getName())) {
+                l7p1l.setText(data[1]);
+                l7p1d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l7pp1);
+            }
+            if (data[0].equals(l7pp2.getName())) {
+                l7p2l.setText(data[1]);
+                l7p2d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l7pp2);
+            }
+            if (data[0].equals(l7pp3.getName())) {
+                l7p3l.setText(data[1]);
+                l7p3d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l7pp3);
+            }
+            if (data[0].equals(l7pp4.getName())) {
+                l7p4l.setText(data[1]);
+                l7p4d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l7pp4);}
+            if (data[0].equals(l7pp5.getName())) {
+                l7p5l.setText(data[1]);
+                l7p5d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
+                setColors(data[2], l7pp5);
+            }
+            }
+        }
     }
-
-    public static void main(String[] args) {
-        GUI gui = new GUI();
-    }
-
 }

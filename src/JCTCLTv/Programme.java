@@ -1,9 +1,7 @@
 package JCTCLTv;
 
-import java.awt.*;
-
 //create class Programme
-public class Programme{
+public abstract class Programme{
     //string to store programme name
     protected String progName;
     //string to store programme Id
@@ -17,18 +15,10 @@ public class Programme{
     //string to store programme description
     protected String description;
     //boolean to check if programme is being watched
-    protected boolean isWatching;
-    //boolean to check if programme has closed captions
     protected boolean hasClosedCaption;
     //boolean to check if programme is a new programme
     protected boolean isNew;
     //boolean to check if programme has been recorded
-    protected boolean isRecorded;
-    ////boolean to check if programme has been marked for viewing later
-    protected boolean isMarked;
-    //boolean to check if programme is currently live
-    protected boolean isLive;
-    //long to store length of movie in seconds
     protected float length;/*change to long data type*/
     //store channel object of programme
     protected Channel channel = new Channel();
@@ -36,27 +26,33 @@ public class Programme{
 
     //default constructor
     public Programme() {
-        progName = "Unknown";
-        showTime = "Unknown";
-        showDate = "Unknown";
-
-        length = 0.0f;
+        progName = null;
+        showTime = null;
+        showDate = null;
+        length = 0f;
+        progId = null;
+        hasClosedCaption = false;
+        isNew = false;
     }
     //primary constructor
-    public Programme(String _progTime, String _showDate, String _showTime, String _progColour, float _length) {
-        progName = _progTime;
+    public Programme(String _progId, String _progName, String _showDate, String _showTime, float _length, boolean _cc, boolean _isnew) {
+        progName = _progName;
         showTime = _showTime;
         showDate = _showDate;
-
         length = _length;
+        progId = _progId;
+        hasClosedCaption = _cc;
+        isNew = _isnew;
     }
     //copy constructor
     public Programme(Programme _pType) {
         progName = _pType.progName;
         showTime = _pType.showTime;
         showDate = _pType.showDate;
-        progColour = _pType.progColour;
         length = _pType.length;
+        isNew = _pType.isNew;
+        hasClosedCaption = _pType.hasClosedCaption;
+        progId = _pType.progId;
     }
 
     //returns programme show time
@@ -115,39 +111,13 @@ public class Programme{
     public String getDescription() {
         return description;
     }
-    //change programme to live or not live
-    public void Live(boolean live) {
-        isLive = live;
-    }
     //change programme to have closed caption or not
     public void ClosedCaption(boolean hasClosedCaption) {
         this.hasClosedCaption = hasClosedCaption;
     }
-    //mark or unmark programme for viewing later
-    public void MarkUnmark() {
-        if (isMarked){
-            isMarked = false;
-        }
-        else{isMarked = true;}
-    }
     //sets the programme to new or not
     public void New(boolean _new) {
         isNew = _new;
-    }
-    //sets isRecorded to true
-    public void Record(){
-        isRecorded = true;
-    }
-    //delete a recorded programme, sets isRecorded to false
-    public String DeleteRecording(){
-        isRecorded = false;
-        return "Recording Deleted";
-    }
-    //if programme is being watched stop watching else start watching
-    public void WatchNow(){
-        if (isWatching)
-        {isWatching = false;}
-        else{isWatching = true;}
     }
     //accessor and modifier for programme id
 
@@ -159,9 +129,6 @@ public class Programme{
         return progId;
     }
     //returns important information on the programme
-    public String[] Details(){
-        String[] details = {progId, progName, progColour.toString(), showDate, showTime, description, Boolean.toString(hasClosedCaption)};
-        return details;
-    }
+    public abstract String[] Details();
 
 }

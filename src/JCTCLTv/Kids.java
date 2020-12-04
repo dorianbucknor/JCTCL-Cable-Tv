@@ -1,36 +1,32 @@
 //include in Tv.JCTCL package
 package JCTCLTv;
 
-import java.awt.*;
-
 public class Kids extends Programme {
     private String ageRange;
 
     {
-        progColour = "128,0,128";
+        progColour = "Purple";
     }
     //Default constructor for Kids
     public Kids() {
-        progName = "Unknown";
-
         ageRange = "7-13";
-        length = 0.0f;
-        channel = new Channel();
-
     }
-
     //Primary constructor for Kids
-    public Kids(String _progName ,String _ageRange){
-        progName = _progName;
+    public Kids(String _progId, String _progName, String _showDate, String _showTime, float _length, boolean _cc, boolean _isnew,String _ageRange){
+        super(_progId, _progName, _showDate, _showTime, _length, _cc, _isnew);
         ageRange = _ageRange;
-
-
     }
 
     //Copy constructor for Kids
     public Kids(Kids _kids){
         ageRange = _kids.ageRange;
-        channel = _kids.channel;
+        progName = _kids.progName;
+        showTime = _kids.showTime;
+        showDate = _kids.showDate;
+        length = _kids.length;
+        isNew = _kids.isNew;
+        hasClosedCaption = _kids.hasClosedCaption;
+        progId = _kids.progId;
     }
 
     //Get method that returns the value of ageRange
@@ -41,5 +37,10 @@ public class Kids extends Programme {
     //Set method that set the value of ageRange
     public void setAgeRange(String _ageRange){
         this.ageRange = _ageRange;
+    }
+
+    @Override
+    public String[] Details() {
+        return new String[] {progId, progName, progColour, showDate, showTime, description, Boolean.toString(isNew), null, null, null, null, null, ageRange, null, null, Float.toString(length)};
     }
 }

@@ -1,37 +1,35 @@
 //include in Tv.JCTCL package
 package JCTCLTv;
 
-import java.awt.*;
-
 //create class News as subclass of Programme
 public class News extends Programme {
     //store news period
     private String period;
-    {
-        progColour = "WHITE";
-    }
+    {     progColour = "White";    }
 
     //default constructor
     News() {
         period = "Unknown";
-        progName = "UNKNOWN";
     }
     //Primary constructor
-    News(String _period, String _progName) {
+    News(String _progId, String _progName, String _showDate, String _showTime, float _length, boolean _cc, boolean _isnew, String _period) {
+        super(_progId, _progName, _showDate, _showTime, _length, _cc, _isnew);
         period = _period;
-
-        progName = _progName;
     }
     //copy constructor
     News(News _news) {
         period = _news.period;
         progName = _news.progName;
-
+        showTime = _news.showTime;
+        showDate = _news.showDate;
+        length = _news.length;
+        isNew = _news.isNew;
+        hasClosedCaption = _news.hasClosedCaption;
+        progId = _news.progId;
     }
     //returns the value of period
     public String getPeriod() {
         return period;
-
     }
     //sets the value of period
     public void setPeriod(String _period) {
@@ -40,7 +38,7 @@ public class News extends Programme {
 
     @Override
     public String[] Details() {
-        String[] details = {progName, progColour.toString(), description, Boolean.toString(hasClosedCaption), period};
-        return details;
+        return new String[] {progId, progName, progColour, showDate, showTime, description, Boolean.toString(isNew), period, null, null, null, null, null, null, null, Float.toString(length)};
     }
 }
+

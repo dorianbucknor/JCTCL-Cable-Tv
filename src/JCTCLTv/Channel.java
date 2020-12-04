@@ -41,8 +41,8 @@ public class Channel{
         this.chNumber = _chNumber;
     }
 
+    //returns all data on channel
     public String[] Details(){
-        String[] details = {chName, Integer.toString(chNumber)};
-        return details;
+        return new String[] {chName, Integer.toString(chNumber)};
     }
 }
