@@ -11,7 +11,8 @@ public class Comedy extends Programme {
         private String episodeTitle;
         private String[] mActors = new String[25];
     {
-        progColour = 255255000;
+       // progColour = 255255000;
+
     }
     //
     public Comedy() {
@@ -20,7 +21,7 @@ public class Comedy extends Programme {
         episodeTitle = "Unknown";
         channel = new Channel();
         mActors = new String[25];
-        new Color(progColour)
+
     }
 
     //
@@ -67,7 +68,7 @@ public class Comedy extends Programme {
 
     @Override
     public String[] Details() {
-        String[] details = {progName, progColour, episodeTitle, description, Float.toString(raTing), Arrays.toString(mActors)};
+        String[] details = {progId, progName, /*progColour,*/ episodeTitle, description, Float.toString(raTing), Arrays.toString(mActors)};
         return details;
     }
 }

@@ -6,12 +6,14 @@ import java.awt.*;
 public class Programme{
     //string to store programme name
     protected String progName;
+    //string to store programme Id
+    protected String progId;
     //string to store programme show time
     protected String showTime;
     //string to store programme programme show date
     protected String showDate;
     //string to store programme colour
-    protected int progColour;
+    protected String progColour;
     //string to store programme description
     protected String description;
     //boolean to check if programme is being watched
@@ -90,7 +92,7 @@ public class Programme{
         this.length = length;
     }
     //set programme colour
-    public void setProgColour(int rgb) {
+    public void setProgColour(String rgb) {
         this.progColour = rgb;
     }
     //return programme colour
@@ -147,9 +149,19 @@ public class Programme{
         {isWatching = false;}
         else{isWatching = true;}
     }
+    //accessor and modifier for programme id
+
+    public void setProgId(String progId) {
+        this.progId = progId;
+    }
+
+    public String getProgId() {
+        return progId;
+    }
     //returns important information on the programme
     public String[] Details(){
-        String[] details = {progName, progColour.toString(), showDate, showTime, description, Boolean.toString(hasClosedCaption)};
+        String[] details = {progId, progName, progColour.toString(), showDate, showTime, description, Boolean.toString(hasClosedCaption)};
         return details;
     }
+
 }

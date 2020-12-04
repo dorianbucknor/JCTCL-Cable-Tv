@@ -1,24 +1,19 @@
-package JCTCLTv;
-
+package JCTCLTv;//this package
+//import all necessary java files
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 import java.io.File;
-import java.text.SimpleDateFormat;
+import java.io.IOException;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAccessor;
 import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Vector;
 import java.util.*;
 
 public class GUI extends Listing{
+    //declare all components and elements used in gui
     protected JPanel mainPanel;
     protected JPanel l1pp1;
     protected JLabel l1chl;
@@ -242,7 +237,7 @@ public class GUI extends Listing{
     private JProgressBar progressBar;
     private JLabel welcometxt;
     private JTextField textField1;
-    private JPasswordField passwordField1 = new JPasswordField();
+    private JPasswordField pswField = new JPasswordField();
     private JPanel logIn;
     private JPanel logInPanel;
     private JLabel pswdF;
@@ -252,51 +247,11 @@ public class GUI extends Listing{
     protected JScrollPane scroll3;
     protected static CardLayout mainLayout = new CardLayout(0,0);
     protected static String curCard = "Load Screen";
-
     protected JFrame frame = new JFrame("JCTCL Cable Tv");
 
-    {
-        //l1pp1.setBackground(ch1P1.progColour);
 
-    }
-
-    public void TimeDate(){
-
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
-        DateTimeFormatter tFormatter = DateTimeFormatter.ofPattern("hh:mm a");
-        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
-        DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("EEEE");
-        Clock clock = Clock.tickSeconds(ZoneId.systemDefault());
-        clock.instant();
-
-        LocalDateTime Date = LocalDateTime.now();
-        LocalDateTime Day = LocalDateTime.now();
-        LocalDateTime Time = LocalDateTime.now();
-        LocalDateTime LTime = LocalDateTime.now();
-
-        time.setText(Time.format(timeFormatter));
-        date.setText(Date.format(dateFormatter));
-        day.setText(Day.format(dayFormatter));
-        T1.setText(LTime.minusSeconds(17280).format(tFormatter) + " - " + LTime.format(tFormatter));
-        T2.setText(LTime.format(tFormatter) + " - " + LTime.plusSeconds(17280).format(tFormatter));
-        T3.setText(LTime.plusSeconds(17280).format(tFormatter) + " - " + LTime.plusSeconds(34560).format(tFormatter));
-        T4.setText(LTime.plusSeconds(34560).format(tFormatter) + " - " + LTime.plusSeconds(51840).format(tFormatter));
-        T5.setText(LTime.plusSeconds(51840).format(tFormatter) + " - " + LTime.plusSeconds(69120).format(tFormatter));
-
-
-
-    }
-
+    //default construct creates, initializes and controls the whloe GUI
     public GUI(){
-
-        List<String[]> listData = new ArrayList<>();
-
-        listData = CsvHandler.fromFile2(new File("ListingData.csv"));
-        System.out.println(Arrays.deepToString(listData.get(23)));
-       // CsvHandler.toFile(new File("tst.csv"), listData);
-
-        TimeDate();
-       // progs.setFocusable(true);
 
         curCard = "Load Screen";
         mainPanel.setLayout(mainLayout);
@@ -304,23 +259,14 @@ public class GUI extends Listing{
         mainPanel.add(mainScreen, "Main Screen");
         mainPanel.add(logIn, "Log In");
 
-
         l7p5l.setText(ch7P5.getProgName() + " " + ch7P5.getEpisodeTitle());
 
         l6p1l.setText(ch6P1.getProgName());
-        l6pp1.setBackground(new Color(Integer.parseInt(ch6P1.getProgName())));
-
         l6p2l.setText(ch6P2.getProgName());
         l6p2d.setText(ch6P2.getDescription());
-        //l6pp2.setBackground(ch6P2.getProgColour());
-
-
-
         scrollPane.getVerticalScrollBar().setUnitIncrement(16);
         scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0,0));
-
         l1p2l.setText(ch1P2.getProgName());
-
 
         l1chl.setText(ch1.getChNumber()+" - "+ch1.getChName() + " ");
         l2chl.setText(ch2.getChNumber()+" - "+ch2.getChName()+ " ");
@@ -330,60 +276,19 @@ public class GUI extends Listing{
         l6chl.setText(ch6.getChNumber()+" - "+ch6.getChName()+ " ");
         l7chl.setText(ch7.getChNumber()+" - "+ch7.getChName()+ " ");
 
-        passwordField1.setEchoChar('*');
-
-        logInPanel.add(passwordField1);
-
+        pswField.setEchoChar('*');
+        logInPanel.add(pswField);
 
         welcometxt.setVisible(false);
-        //frame.setFocusable(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setUndecorated(true);
         frame.add(mainPanel);
         frame.setSize(700, 300);
         frame.setLocationRelativeTo(null);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
         frame.setVisible(true);
 
-        passwordField1.addKeyListener(new KeyAdapter() {
-            char[] psd = {'q','w','e','r','t','y'};
-            char[] passw = passwordField1.getPassword();
-            @Override
-            public void keyPressed(KeyEvent e) {
-                if(Arrays.equals(passw, psd)){
-                     JOptionPane.showMessageDialog(logInPanel, "Hello World.");
-                    System.out.println("Hello World");
-                    try
-                    {
-                        File file = new File("Records.csv");
-                        if(!Desktop.isDesktopSupported())//check if Desktop is supported by Platform or not
-                        {
-                            System.out.println("not supported");
-                            return;
-                        }
-                        Desktop desktop = Desktop.getDesktop();
-                        if(file.exists())         //checks file exists or not
-                            desktop.open(file);              //opens the specified file
-                    }
-                    catch(Exception i)
-                    {
-                        i.printStackTrace();
-                    }
-                }
-                if(Arrays.equals(passw, psd) == false){
-                    JOptionPane.showMessageDialog(logInPanel, "Incorrect Password! Please Enter A Valid Pasword To Continue.");
-                }
-                if(curCard == "Log In" && e.getKeyCode() == 27){
-                    mainLayout.show(mainPanel, "Main Screen");
-                    curCard = "Main Screen";
-                }
-            }
-        });
-
-
-        //frame.setFocusable(true);
-
+        //add key listner for user input
         frame.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -399,68 +304,125 @@ public class GUI extends Listing{
         });
 
         LoadScreen();
-        //mainLayout.show(mainPanel, "Log In");
+        TimeDate();
         ListingCon();
-
-
+        ViewPrograms();
     }
 
+    //this method creates and control how the user is able to traverse through the programme listing
     public void ListingCon(){
+
+        Set<KeyStroke> forwardKeys = new HashSet<KeyStroke>();
+        Set<KeyStroke> backwardKeys = new HashSet<KeyStroke>();
+        Set<KeyStroke> upKeys = new HashSet<KeyStroke>();
+        Set<KeyStroke> downKeys = new HashSet<KeyStroke>();
+
+        forwardKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_D, 0));
+        backwardKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_A, 0));
+        upKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_W, 0));
+        downKeys.add(KeyStroke.getKeyStroke(KeyEvent.VK_S, 0));
+
+        l1pp1.requestFocus();
+
+        progs.setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, forwardKeys);
+        progs.setFocusTraversalKeys(KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, backwardKeys);
+        progs.setFocusTraversalKeys(KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, upKeys);
+        progs.setFocusTraversalKeys(KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS, downKeys);
 
         Vector<Component> chanOrder = new Vector<>(7);
         chanOrder.add(l1);
+        l1.setName("ch1");
         chanOrder.add(l1pp1);
+        l1pp1.setName("ch1P1");
         chanOrder.add(l1pp2);
+        l1pp2.setName("ch1P2");
         chanOrder.add(l1pp3);
+        l1pp3.setName("ch1P3");
         chanOrder.add(l1pp4);
+        l1pp4.setName("ch1P4");
         chanOrder.add(l1pp5);
+        l1pp5.setName("ch1P5");
 
         chanOrder.add(l2);
+        l2.setName("ch2");
         chanOrder.add(l2pp1);
         chanOrder.add(l2pp2);
         chanOrder.add(l2pp3);
         chanOrder.add(l2pp4);
         chanOrder.add(l2pp5);
+        l2pp1.setName("ch2P1");
+        l2pp2.setName("ch2P2");
+        l2pp3.setName("ch2P3");
+        l2pp4.setName("ch2P4");
+        l2pp5.setName("ch2P5");
 
         chanOrder.add(l3);
+        l3.setName("ch3");
         chanOrder.add(l3pp1);
         chanOrder.add(l3pp2);
         chanOrder.add(l3pp3);
         chanOrder.add(l3pp4);
         chanOrder.add(l3pp5);
+        l3pp1.setName("ch3P1");
+        l3pp2.setName("ch3P2");
+        l3pp3.setName("ch3P3");
+        l3pp4.setName("ch3P4");
+        l3pp5.setName("ch3P5");
 
         chanOrder.add(l4);
+        l4.setName("ch4");
         chanOrder.add(l4pp1);
         chanOrder.add(l4pp2);
         chanOrder.add(l4pp3);
         chanOrder.add(l4pp4);
         chanOrder.add(l4pp5);
+        l4pp1.setName("ch4P1");
+        l4pp2.setName("ch4P2");
+        l4pp3.setName("ch4P3");
+        l4pp4.setName("ch4P4");
+        l4pp5.setName("ch4P5");
 
         chanOrder.add(l5);
+        l5.setName("ch5");
         chanOrder.add(l5pp1);
         chanOrder.add(l5pp2);
         chanOrder.add(l5pp3);
         chanOrder.add(l5pp4);
         chanOrder.add(l5pp5);
+        l5pp1.setName("ch5P1");
+        l5pp2.setName("ch5P2");
+        l5pp3.setName("ch5P3");
+        l5pp4.setName("ch5P4");
+        l5pp5.setName("ch5P5");
 
         chanOrder.add(l6);
+        l6.setName("ch6");
         chanOrder.add(l6pp1);
         chanOrder.add(l6pp2);
         chanOrder.add(l6pp3);
         chanOrder.add(l6pp4);
         chanOrder.add(l6pp5);
+        l6pp1.setName("ch6P1");
+        l6pp2.setName("ch6P2");
+        l6pp3.setName("ch6P3");
+        l6pp4.setName("ch6P4");
+        l6pp5.setName("ch6P5");
 
         chanOrder.add(l7);
+        l7.setName("ch7");
         chanOrder.add(l7pp1);
         chanOrder.add(l7pp2);
         chanOrder.add(l7pp3);
         chanOrder.add(l7pp4);
         chanOrder.add(l7pp5);
+        l7pp1.setName("ch7P1");
+        l7pp2.setName("ch7P2");
+        l7pp3.setName("ch7P3");
+        l7pp4.setName("ch7P4");
+        l7pp5.setName("ch7P5");
 
         CustomTraversalPolicy chanPol = new CustomTraversalPolicy(chanOrder);
-
         progs.setFocusTraversalPolicy(chanPol);
-
         FocusAdapter listener = new Control().DisplayController(mainPanel);
 
         l1.addFocusListener(listener);
@@ -507,6 +469,79 @@ public class GUI extends Listing{
         l7pp5.addFocusListener(listener);
     }
 
+    //controls the time and displayed on gui
+    public void TimeDate(){
+
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
+        DateTimeFormatter tFormatter = DateTimeFormatter.ofPattern("hh:mm a");
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
+        DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("EEEE");
+        Clock clock = Clock.tickSeconds(ZoneId.systemDefault());
+        clock.instant();
+
+        LocalDateTime Date = LocalDateTime.now();
+        LocalDateTime Day = LocalDateTime.now();
+        LocalDateTime Time = LocalDateTime.now();
+        LocalDateTime LTime = LocalDateTime.now();
+
+        time.setText(Time.format(timeFormatter));
+        date.setText(Date.format(dateFormatter));
+        day.setText(Day.format(dayFormatter));
+        T1.setText(LTime.minusSeconds(17280).format(tFormatter) + " - " + LTime.format(tFormatter));
+        T2.setText(LTime.format(tFormatter) + " - " + LTime.plusSeconds(17280).format(tFormatter));
+        T3.setText(LTime.plusSeconds(17280).format(tFormatter) + " - " + LTime.plusSeconds(34560).format(tFormatter));
+        T4.setText(LTime.plusSeconds(34560).format(tFormatter) + " - " + LTime.plusSeconds(51840).format(tFormatter));
+        T5.setText(LTime.plusSeconds(51840).format(tFormatter) + " - " + LTime.plusSeconds(69120).format(tFormatter));
+    }
+    //log in controller to view programme listing file
+    public void ViewPrograms(){
+        pswField.requestFocus();
+        pswField.addKeyListener(new KeyAdapter() {
+            char[] psd = {'q','w','e','r','t','y'};
+            char[] passw = pswField.getPassword();
+            {
+                System.out.println("here1");
+            }
+            @Override
+            public void keyPressed(KeyEvent e) {
+                pswField.setFocusable(true);
+                System.out.println("here2");
+
+                if(e.getKeyCode() == 10 ) {
+                    if (Arrays.equals(passw, psd)) {
+                        JOptionPane.showMessageDialog(logInPanel, "Hello World.");
+                        System.out.println("Hello World");
+                        System.out.println("here3");
+
+                        try {
+                            File file = new File("Records.csv");
+                            if (!Desktop.isDesktopSupported())//check if Desktop is supported by Platform or not
+                            {
+                                System.out.println("not supported");
+                                return;
+                            }
+                            Desktop desktop = Desktop.getDesktop();
+                            if (file.exists())         //checks file exists or not
+                                desktop.open(file);              //opens the specified file
+                        } catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(logInPanel, "Incorrect Password! Please Enter A Valid Pasword To Continue.");
+                    }
+                }
+                if(e.getKeyCode() == 27){
+                    pswField.setFocusable(false);
+                    //frame.setFocusable(true);
+                    mainLayout.show(mainPanel, "Main Screen");
+                    curCard = "Main Screen";
+                }
+            }
+        });
+    }
+
+    //creates and controls a modern looking load screen
     public void LoadScreen(){
 
         long pMils = 80;
@@ -540,6 +575,40 @@ public class GUI extends Listing{
                 }
             }
         }
+    }
+    //import and register cutom font used in GUI
+    public static void Fonts()
+    {
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        try
+        {
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("NovaSquare.ttf")));
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("Ikaros-Regular.ttf")));
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File( "EUROSWH.TTF")));
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File( "DODGER.TTF")));
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File( "Backslash.ttf")));
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File( "Anita semi square.ttf")));
+        }
+        catch (IOException | FontFormatException ex)
+        {
+            System.out.println("Unexpected exception loading fonts"+ ex);
+        }
+    }
+
+    public void AssignData(){
+
+      //  String name;
+        int chP = 0;
+        int pgP = 0;
+
+
+        String srcval =  "ch"+Integer.toString(chP)+"P"+Integer.toString(pgP);
+
+        List<String> data;
+
+
+
+        //Filehandler.getRecord();
     }
 
     public static void main(String[] args) {

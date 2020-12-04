@@ -120,7 +120,7 @@
         <properties>
           <focusable value="false"/>
           <verifyInputWhenFocusTarget value="false"/>
-          <visible value="true"/>
+          <visible value="false"/>
         </properties>
         <border type="none"/>
         <children>
@@ -170,7 +170,7 @@
                           <background color="-14803363"/>
                           <focusable value="false"/>
                           <font name="Backslash" size="36" style="2"/>
-                          <foreground color="-10977284"/>
+                          <foreground color="-65356"/>
                           <requestFocusEnabled value="false"/>
                           <text value="JCTCL Cable Tv Programme Listing "/>
                           <verifyInputWhenFocusTarget value="false"/>
@@ -3771,7 +3771,9 @@
         </constraints>
         <properties>
           <background color="-14803363"/>
+          <focusable value="false"/>
           <opaque value="true"/>
+          <requestFocusEnabled value="false"/>
         </properties>
         <border type="none"/>
         <children>
@@ -3779,14 +3781,18 @@
             <constraints border-constraint="Center"/>
             <properties>
               <background color="-14803363"/>
-              <maximumSize width="450" height="2147483647"/>
+              <focusable value="false"/>
+              <maximumSize width="450" height="200"/>
               <minimumSize width="450" height="94"/>
               <opaque value="true"/>
-              <preferredSize width="450" height="102"/>
+              <preferredSize width="450" height="200"/>
+              <requestFocusEnabled value="false"/>
+              <verifyInputWhenFocusTarget value="false"/>
             </properties>
             <border type="none">
               <font/>
               <title-color color="-14079703"/>
+              <color color="-16777216"/>
             </border>
             <children>
               <component id="1a762" class="javax.swing.JTextField" binding="textField1" default-binding="true">
@@ -3804,7 +3810,7 @@
                   <preferredSize width="350" height="30"/>
                 </properties>
               </component>
-              <component id="89870" class="javax.swing.JPasswordField" binding="passwordField1" default-binding="true">
+              <component id="89870" class="javax.swing.JPasswordField" binding="pswField" default-binding="true">
                 <constraints>
                   <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="3" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -3829,11 +3835,14 @@
                 </constraints>
                 <properties>
                   <background color="-14803363"/>
+                  <focusable value="false"/>
                   <font name="Dodger" style="2"/>
                   <foreground color="-1"/>
                   <inheritsPopupMenu value="false"/>
                   <opaque value="true"/>
+                  <requestFocusEnabled value="false"/>
                   <text value=" Password: "/>
+                  <verifyInputWhenFocusTarget value="false"/>
                 </properties>
               </component>
               <component id="3c8cb" class="javax.swing.JLabel" binding="usrNF">
@@ -3843,12 +3852,15 @@
                 </constraints>
                 <properties>
                   <background color="-14803363"/>
+                  <focusable value="false"/>
                   <font name="Dodger" style="2"/>
                   <foreground color="-1"/>
                   <iconTextGap value="4"/>
                   <inheritsPopupMenu value="false"/>
                   <opaque value="true"/>
+                  <requestFocusEnabled value="false"/>
                   <text value="User Name: "/>
+                  <verifyInputWhenFocusTarget value="false"/>
                   <visible value="true"/>
                 </properties>
               </component>
@@ -3864,6 +3876,8 @@
                   <minimumSize width="10" height="1"/>
                   <opaque value="true"/>
                   <preferredSize width="5" height="5"/>
+                  <requestFocusEnabled value="false"/>
+                  <verifyInputWhenFocusTarget value="false"/>
                 </properties>
               </component>
               <component id="cd3c0" class="javax.swing.JSeparator">
@@ -3876,6 +3890,8 @@
                   <foreground color="-16777216"/>
                   <opaque value="true"/>
                   <preferredSize width="0" height="5"/>
+                  <requestFocusEnabled value="false"/>
+                  <verifyInputWhenFocusTarget value="false"/>
                 </properties>
               </component>
               <component id="cad91" class="javax.swing.JLabel">
@@ -3887,7 +3903,9 @@
                   <background color="-14803363"/>
                   <font name="Dodger" size="28" style="3"/>
                   <foreground color="-10977284"/>
+                  <requestFocusEnabled value="false"/>
                   <text value="Log In  "/>
+                  <verifyInputWhenFocusTarget value="false"/>
                 </properties>
               </component>
               <component id="44461" class="javax.swing.JSeparator">
@@ -3902,6 +3920,27 @@
                   <maximumSize width="10" height="5"/>
                   <opaque value="true"/>
                   <preferredSize width="2" height="5"/>
+                  <requestFocusEnabled value="false"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <component id="91fdb" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <background color="-14803363"/>
+                  <focusable value="false"/>
+                  <font name="Droid Sans" style="2"/>
+                  <foreground color="-1"/>
+                  <iconTextGap value="4"/>
+                  <inheritsPopupMenu value="false"/>
+                  <opaque value="true"/>
+                  <requestFocusEnabled value="false"/>
+                  <text value="Tab then Enter to Verify Credentials***"/>
+                  <verifyInputWhenFocusTarget value="false"/>
                   <visible value="true"/>
                 </properties>
               </component>

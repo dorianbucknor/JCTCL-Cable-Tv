@@ -6,6 +6,7 @@ public class Weather extends Programme {
     private int severityRating;
     {
         progColour = "WHITE";
+
     }
 
     public Weather() {
@@ -23,7 +24,6 @@ public class Weather extends Programme {
     public Weather(Weather _weather) {
         severityRating = _weather.severityRating;
         channel = _weather.channel;
-
         progName = _weather.progName;
         length = _weather.length;
         channel = _weather.channel;

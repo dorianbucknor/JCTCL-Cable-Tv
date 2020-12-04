@@ -13,7 +13,7 @@ public class Movie extends Programme {
     //stores the actors of the movie
     private String[] actors = new String[25];
     {
-        progColour = "255, 0 , 0, 140";
+         progColour = "255, 0 , 0, 140";
     }
 
     //default constructor
@@ -71,7 +71,7 @@ public class Movie extends Programme {
     //returns details of movie
     @Override
     public String[] Details() {
-        String[] details = {progName, showDate, showTime, description, Float.toString(rating), Arrays.toString(actors), releaseDate};
+        String[] details = {progId, progName, showDate, showTime, description, Float.toString(rating), Arrays.toString(actors), releaseDate};
         return details;
     }
 }

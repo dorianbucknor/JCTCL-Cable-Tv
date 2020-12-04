@@ -1,7 +1,6 @@
 package JCTCLTv;
 
 import com.opencsv.*;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -9,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.IntFunction;
+
 
 public class CsvHandler {
 
@@ -63,18 +62,25 @@ public class CsvHandler {
         return AllData;
     }
 
-    public static List<String[]> fromFile2(File file) {
+    public static String[] getData(String srchval) {
+        File file = new File("ListingData.csv");
+        String[] data = null;
 
-        List<String[]> AllData = new ArrayList<String[]>();
-
-        try {
+    try {
             CSVReader csvReader = new CSVReader(new FileReader(file));
-            AllData = csvReader.readAll();
+            String[] line = csvReader.readNext();
+
+            if(line[0] == srchval){
+                data = line;
+            }else{
+                System.out.println("Data Not Fund!.");
+            }
+
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
-        System.out.println("File Read");
-        return AllData;
+        System.out.println("Exit");
+        return data;
     }
 
     public static void toFile2(List<String[]> data, File file){
