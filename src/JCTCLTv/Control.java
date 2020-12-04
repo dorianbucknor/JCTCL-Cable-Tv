@@ -58,21 +58,28 @@ public class Control {
                                    }
                                    break;
                                 case 77:
-                                    if(!isMarked) {
-                                        Indicator(e.getComponent(), Indicator.MARK);
-                                        isMarked = true;
-                                    }else{
+                                    boolean marked = false;
+                                    if(e.getComponent().getParent().getName().equals(e.getComponent().getName())) {
+                                        if (e.getComponent().getForeground().equals(Color.red)) {
+                                            marked = false;
+                                        } else {
+                                            marked = true;
+                                        }
+                                    }
+                                    if(marked){
                                         Indicator(e.getComponent(), Indicator.UNMARK);
-                                        isMarked = false;
+                                    }else{
+                                        Indicator(e.getComponent(), Indicator.MARK);
                                     }
                                     break;
                                 case 82:
-                                    if(!isRec){
-                                        Indicator(e.getComponent(), Indicator.RECORD);
-                                        isRec = true;
-                                    }else{
-                                        Indicator(e.getComponent(), Indicator.D_RECORD);
-                                        isRec = false;
+                                    if(e.getComponent().getParent().getName() != e.getComponent().getName()) {
+                                        if (!(e.getComponent().getForeground() == Color.red)) {
+                                            Indicator(e.getComponent(), Indicator.RECORD);
+                                        } else {
+                                            if (e.getComponent().getForeground() == Color.red)
+                                                Indicator(e.getComponent(), Indicator.D_RECORD);
+                                        }
                                     }
                                     break;
                             }
@@ -93,8 +100,6 @@ public class Control {
 
     public void popUp(Component comp, Component parentcon){
         if(!phasShown) {
-
-
             JPanel pan = new JPanel(new BorderLayout(0,0));
             JFrame ppFrame = new JFrame("Program Information: ");
             JLabel label = new JLabel("The Heading");
@@ -111,11 +116,10 @@ public class Control {
             JTextArea text = (JTextArea) k.getComponent(2);
             details.setText(text.getText());
 
-
             label.setBackground(new Color(255, 134, 146));
             label.setForeground(new Color(30, 30, 93));
             label.setPreferredSize(new Dimension(600, 50));
-            label.setFont(Font.getFont("Anita semi square"));
+            label.setFont(new Font("NovaSquare" ,1, 24));
             label.setOpaque(true);
             label.setVisible(true);
 
@@ -161,11 +165,13 @@ public class Control {
         JLabel clabel = new JLabel("The Heading");
         JLabel plabel = new JLabel("The HProg");
 
-        String[] data = CsvHandler.getData(comp.getName(), "ListingData.csv");
+        Container k = (Container) comp;
+        JLabel l = (JLabel) k.getComponent(0);
+        plabel.setText(l.getText());
 
         clabel.setBackground(new Color(255, 134, 146));
         clabel.setForeground(new Color(30, 30, 93));
-        clabel.setFont(new Font("Anita", 1, 24));
+        clabel.setFont(new Font("NovaSquare", 1, 24));
         clabel.setPreferredSize(new Dimension(600, 50));
         clabel.setOpaque(true);
         clabel.setVisible(true);
@@ -233,7 +239,7 @@ public class Control {
     }
 
     private void IndicateOff(Container i_con, int idx) {
-        i_con.getComponent(idx).setForeground(new Color(60,63,65));
+        i_con.getComponent(idx).setForeground(Color.BLACK);
     }
 
     enum Indicator{

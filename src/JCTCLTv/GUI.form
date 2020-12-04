@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="JCTCLTv.GUI">
   <grid id="27dc6" binding="mainPanel" layout-manager="CardLayout" hgap="0" vgap="0" show="360a4">
     <constraints>
-      <xy x="20" y="20" width="1200" height="3477"/>
+      <xy x="20" y="20" width="1573" height="3477"/>
     </constraints>
     <properties>
       <preferredSize width="702" height="2168"/>
@@ -3667,6 +3667,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="NEW"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -3675,6 +3676,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="REC"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -3683,6 +3685,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <requestFocusEnabled value="false"/>
                                           <text value="MD"/>
                                           <verifyInputWhenFocusTarget value="false"/>
@@ -3758,6 +3761,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="NEW"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -3766,6 +3770,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="REC"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -3774,6 +3779,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <requestFocusEnabled value="false"/>
                                           <text value="MD"/>
                                           <verifyInputWhenFocusTarget value="false"/>
@@ -3849,6 +3855,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="NEW"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -3857,6 +3864,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="REC"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -3865,6 +3873,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <requestFocusEnabled value="false"/>
                                           <text value="MD"/>
                                           <verifyInputWhenFocusTarget value="false"/>
@@ -3940,6 +3949,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="NEW"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -3948,6 +3958,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="REC"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -3956,6 +3967,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <requestFocusEnabled value="false"/>
                                           <text value="MD"/>
                                           <verifyInputWhenFocusTarget value="false"/>
@@ -4031,6 +4043,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="NEW"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -4039,6 +4052,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <text value="REC"/>
                                           <verifyInputWhenFocusTarget value="false"/>
                                         </properties>
@@ -4047,6 +4061,7 @@
                                         <constraints/>
                                         <properties>
                                           <focusable value="false"/>
+                                          <foreground color="-16777216"/>
                                           <requestFocusEnabled value="false"/>
                                           <text value="MD"/>
                                           <verifyInputWhenFocusTarget value="false"/>
@@ -4077,6 +4092,196 @@
                   </grid>
                 </children>
               </scrollpane>
+            </children>
+          </grid>
+          <grid id="512d4" layout-manager="GridLayoutManager" row-count="1" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints border-constraint="South"/>
+            <properties>
+              <background color="-14803342"/>
+              <foreground color="-446465"/>
+              <visible value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="1400e" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <lineWrap value="false"/>
+                  <opaque value="true"/>
+                  <requestFocusEnabled value="false"/>
+                  <text value="Q - View Listing File "/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
+              </component>
+              <component id="69bdb" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <lineWrap value="false"/>
+                  <opaque value="true"/>
+                  <requestFocusEnabled value="false"/>
+                  <text value="Down Arrow - Scroll Down"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
+              </component>
+              <component id="e17ce" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <lineWrap value="false"/>
+                  <opaque value="true"/>
+                  <requestFocusEnabled value="false"/>
+                  <text value="V - View Channel"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
+              </component>
+              <component id="d4298" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <lineWrap value="false"/>
+                  <opaque value="true"/>
+                  <requestFocusEnabled value="false"/>
+                  <text value="Up Arrow - Scroll Up"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
+              </component>
+              <component id="40d36" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <lineWrap value="false"/>
+                  <opaque value="true"/>
+                  <requestFocusEnabled value="false"/>
+                  <text value="M - Mark For Viewing"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
+              </component>
+              <component id="a01f1" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <lineWrap value="false"/>
+                  <opaque value="true"/>
+                  <requestFocusEnabled value="false"/>
+                  <text value="R  - Record"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
+              </component>
+              <component id="41f72" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <opaque value="true"/>
+                  <text value="P - Peek Program"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <component id="726cb" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <opaque value="true"/>
+                  <text value="Right Arrow - Go Right"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <component id="14ed6" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <opaque value="true"/>
+                  <text value="E - Exit"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <component id="426a" class="javax.swing.JTextArea">
+                <constraints>
+                  <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14803342"/>
+                  <focusCycleRoot value="false"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <font name="Nova Square" size="14" style="2"/>
+                  <opaque value="true"/>
+                  <text value="Left Arow - Go Left"/>
+                  <verifyInputWhenFocusTarget value="false"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
             </children>
           </grid>
         </children>

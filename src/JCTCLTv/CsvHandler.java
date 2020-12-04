@@ -100,6 +100,12 @@ public class CsvHandler {
         CSVWriter writer = new CSVWriter(outFile);
 
         writer.writeNext(data);
+        try {
+            writer.close();
+            outFile.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public static List<String[]> readAllData(String _file){
         File file = new File(_file);
@@ -108,6 +114,7 @@ public class CsvHandler {
         try {
             CSVReader csvReader = new CSVReader(new FileReader(file));
             data = csvReader.readAll();
+            csvReader.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -147,7 +154,9 @@ public class CsvHandler {
                 System.out.println("Not Found");
             }
             alldata = CsvHandler.readAllData(file.getPath());
-            alldata.remove(idx);
+            if(alldata != null){
+                alldata.remove(idx-1);
+            }
             CsvHandler.addMultipleRecords(alldata, file);
         } catch (Exception e) {
             e.printStackTrace();

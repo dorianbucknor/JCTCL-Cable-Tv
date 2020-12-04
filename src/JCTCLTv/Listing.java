@@ -40,10 +40,10 @@ public class Listing {
 
 
     public Channel ch5 = new Channel("KID", 204);
-    public Kids ch5P1 = new Kids("ch5P1","Rick and Morty",null, null, 4.8f, false, false,"16 - 19");
+    public Kids ch5P1 = new Kids("ch5P1","Rick and Morty",null, null, 4.8f, true, true,"16 - 19");
     public Kids ch5P2 = new Kids("ch5P2","Sofia the First",null, null, 4.8f, false, false,"4 - 10");
     public Kids ch5P3 = new Kids("ch5P3","Teen Titans Go",null, null, 4.8f, false, false,"7 - 14");
-    public Kids ch5P4 = new Kids("ch5P4","Justice League",null, null, 4.8f, false, false,"12 - 16");
+    public Kids ch5P4 = new Kids("ch5P4","Justice League",null, null, 4.8f, true, true,"12 - 16");
     public Kids ch5P5 = new Kids("ch5P5","Adventure Time",null, null, 4.8f, false, false,"14 - 18");
 
 
@@ -57,10 +57,10 @@ public class Listing {
 
     public Channel ch7 = new Channel("COM", 206);
     public Comedy ch7P1 = new Comedy("ch7P1", "Archer",null, null, 4.8f, false, false,8,"Episode12",new String[]{"Jack Black"});
-    public Comedy ch7P2 = new Comedy("ch7P2", "Family Guy", null, null, 4.8f, false, false,6,"Episode7",new String[]{"Eddie Murphy"});
-    public Comedy ch7P3 = new Comedy("ch7P3", "iCarly", null, null, 4.8f, false, false,7,"Episode9",new String[]{"Adam Sandler"});
+    public Comedy ch7P2 = new Comedy("ch7P2", "Family Guy", null, null, 4.8f, true, false,6,"Episode7",new String[]{"Eddie Murphy"});
+    public Comedy ch7P3 = new Comedy("ch7P3", "iCarly", null, null, 4.8f, false, true,7,"Episode9",new String[]{"Adam Sandler"});
     public Comedy ch7P4 = new Comedy("ch7P4", "Big Bang Theory",  null, null, 4.8f, false, false,6,"Episode4",new String[]{"Jaleel Ahmad White"});
-    public Comedy ch7P5 = new Comedy("ch7P5", "Fresh Prince", null, null, 4.8f, false, false,9, "Episode10", new String[]{"Will Smith"});
+    public Comedy ch7P5 = new Comedy("ch7P5", "Fresh Prince", null, null, 4.8f, true, true,9, "Episode10", new String[]{"Will Smith"});
 
     //put extra info inside brackets
     public Listing() {
@@ -91,7 +91,6 @@ public class Listing {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(GraphicsEnvironment.getLocalGraphicsEnvironment().getAllFonts()));
         GUI.Fonts();
         Listing l = new Listing();
         GUI g = new GUI();
