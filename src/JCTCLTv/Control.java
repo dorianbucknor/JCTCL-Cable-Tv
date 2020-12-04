@@ -67,6 +67,13 @@ public class Control {
                                     }
                                     break;
                                 case 82:
+                                    if(!isRec){
+                                        Indicator(e.getComponent(), Indicator.RECORD);
+                                        isRec = true;
+                                    }else{
+                                        Indicator(e.getComponent(), Indicator.D_RECORD);
+                                        isRec = false;
+                                    }
                                     break;
                             }
                         }

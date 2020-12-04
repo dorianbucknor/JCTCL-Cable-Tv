@@ -90,7 +90,7 @@ public class Listing {
 
     public static void main(String[] args) {
         GUI.Fonts();
-        Listing l = new Listing();
-        GUI g = new GUI();
+        //Listing l = new Listing();
+        //GUI g = new GUI();
     }
 }

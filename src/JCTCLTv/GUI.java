@@ -530,12 +530,18 @@ public class GUI extends Listing{
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         try
         {
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("NovaSquare.ttf")));
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("Ikaros-Regular.ttf")));
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File( "EUROSWH.TTF")));
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File( "DODGER.TTF")));
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File( "Backslash.ttf")));
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File( "Anita semi square.ttf")));
+            Font NovaSquare = Font.createFont(Font.TRUETYPE_FONT, new File("NovaSquare.ttf"));
+            ge.registerFont( NovaSquare);
+            Font Ikaros = Font.createFont(Font.TRUETYPE_FONT, new File("Ikaros-Regular.ttf"));
+            ge.registerFont(Ikaros);
+            Font EUROSWH = Font.createFont(Font.TRUETYPE_FONT, new File( ".ttf"));
+            ge.registerFont(EUROSWH);
+            Font DODGER = Font.createFont(Font.TRUETYPE_FONT, new File( "DODGER.ttf"));
+            ge.registerFont(DODGER);
+            Font Backslash = Font.createFont(Font.TRUETYPE_FONT, new File( "Backslash.ttf"));
+            ge.registerFont(Backslash);
+            Font Anita = Font.createFont(Font.TRUETYPE_FONT, new File( "Anita semi square.ttf"));
+            ge.registerFont(Anita);
         }
         catch (IOException | FontFormatException ex)
         {
