@@ -534,7 +534,7 @@ public class GUI extends Listing{
             ge.registerFont( NovaSquare);
             Font Ikaros = Font.createFont(Font.TRUETYPE_FONT, new File("Ikaros-Regular.ttf"));
             ge.registerFont(Ikaros);
-            Font EUROSWH = Font.createFont(Font.TRUETYPE_FONT, new File( ".ttf"));
+            Font EUROSWH = Font.createFont(Font.TRUETYPE_FONT, new File( "EUROSWH.ttf"));
             ge.registerFont(EUROSWH);
             Font DODGER = Font.createFont(Font.TRUETYPE_FONT, new File( "DODGER.ttf"));
             ge.registerFont(DODGER);
@@ -557,7 +557,7 @@ public class GUI extends Listing{
                 pan.setBackground(new Color(0,255,0,50));
                 break;
             case "White":
-                pan.setBackground(new Color(255,255,255,100));
+                pan.setBackground(new Color(255,255,255,170));
                 break;
             case "Red":
                 pan.setBackground(new Color(255,0,0,50));
@@ -577,188 +577,162 @@ public class GUI extends Listing{
     public void AssignData(){
 
         String[] data = null;
-
+        try{
         for (int p = 0; p < 7; p++) {
-            for(int q = 0; q < 5; q++){
-             String srcval =  "ch"+Integer.toString(p+1)+"P"+Integer.toString(q+1);
-            data = CsvHandler.getData(srcval, "ListingData.csv");
-            if (data[0].equals(l1pp1.getName())) {
-                l1p1l.setText(data[1]);
-                l1p1d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l1pp1);
-            }
-            if (data[0].equals(l1pp2.getName())) {
-                l1p2l.setText(data[1]);
-                l1p2d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l1pp2);
-            }
-            if (data[0].equals(l1pp3.getName())) {
-                l1p3l.setText(data[1]);
-                l1p3d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l1pp3);
-            }
-            if (data[0].equals(l1pp4.getName())) {
-                l1p4l.setText(data[1]);
-                l1p4d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l1pp4);
-            }
-            if (data[0].equals(l1pp5.getName())) {
-                l1p5l.setText(data[1]);
-                l1p5d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l1pp5);
-            }
-            if (data[0].equals(l2pp1.getName())) {
-                l2p1l.setText(data[1]);
-                l2p1d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l2pp1);
+            for (int q = 0; q < 5; q++) {
+                String srcval = "ch" + Integer.toString(p + 1) + "P" + Integer.toString(q + 1);
+                data = CsvHandler.getData(srcval, "ListingData.csv");
+                if (data[0].equals(l1pp1.getName())) {
+                    l1p1l.setText(data[1]);
+                    l1p1d.setText("Description: " + data[5] + "\n" + "Period: " + data[7] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l1pp1);
+                } else if (data[0].equals(l1pp2.getName())) {
+                    l1p2l.setText(data[1]);
+                    l1p2d.setText("Description: " + data[5] + "\n" + "Period: " + data[7] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l1pp2);
+                } else if (data[0].equals(l1pp3.getName())) {
+                    l1p3l.setText(data[1]);
+                    l1p3d.setText("Description: " + data[5] + "\n" + "Period: " + data[7] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l1pp3);
+                } else if (data[0].equals(l1pp4.getName())) {
+                    l1p4l.setText(data[1]);
+                    l1p4d.setText("Description: " + data[5] + "\n" + "Period: " + data[7] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l1pp4);
+                } else if (data[0].equals(l1pp5.getName())) {
+                    l1p5l.setText(data[1]);
+                    l1p5d.setText("Description: " + data[5] + "\n" + "Period: " + data[7] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l1pp5);
+                } else if (data[0].equals(l2pp1.getName())) {
+                    l2p1l.setText(data[1]);
+                    l2p1d.setText("Description: " + data[5] + "\n" + "Severity Rating: " + data[14] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l2pp1);
 
-            }
-            if (data[0].equals(l2pp2.getName())) {
-                l2p2l.setText(data[1]);
-                l2p2d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l2pp2);
+                } else if (data[0].equals(l2pp2.getName())) {
+                    l2p2l.setText(data[1]);
+                    l2p2d.setText("Description: " + data[5] + "\n" + "Severity Rating: " + data[14] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l2pp2);
 
+                } else if (data[0].equals(l2pp3.getName())) {
+                    l2p3l.setText(data[1]);
+                    l2p3d.setText("Description: " + data[5] + "\n" + "Severity Rating: " + data[14] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l2pp3);
+                } else if (data[0].equals(l2pp4.getName())) {
+                    l2p4l.setText(data[1]);
+                    l2p4d.setText("Description: " + data[5] + "\n" + "Severity Rating: " + data[14] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l2pp4);
+                } else if (data[0].equals(l2pp5.getName())) {
+                    l2p5l.setText(data[1]);
+                    l2p5d.setText("Description: " + data[5] + "\n" + "Severity Rating: " + data[14] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l2pp5);
+                } else if (data[0].equals(l3pp1.getName())) {
+                    l3p1l.setText(data[1]);
+                    l3p1d.setText("Description: " + data[5] + "\n" + "Denomination: " + data[11] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l3pp1);
+                } else if (data[0].equals(l3pp2.getName())) {
+                    l3p2l.setText(data[1]);
+                    l3p2d.setText("Description: " + data[5] + "\n" + "Denomination: " + data[11] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l3pp2);
+                } else if (data[0].equals(l3pp3.getName())) {
+                    l3p3l.setText(data[1]);
+                    l3p3d.setText("Description: " + data[5] + "\n" + "Denomination: " + data[11] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l3pp3);
+                } else if (data[0].equals(l3pp4.getName())) {
+                    l3p4l.setText(data[1]);
+                    l3p4d.setText("Description: " + data[5] + "\n" + "Denomination: " + data[11] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l3pp4);
+                } else if (data[0].equals(l3pp5.getName())) {
+                    l3p5l.setText(data[1]);
+                    l3p5d.setText("Description: " + data[5] + "\n" + "Denomination: " + data[11] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l3pp5);
+                } else if (data[0].equals(l4pp1.getName())) {
+                    l4p1l.setText(data[1]);
+                    l4p1d.setText("Description: " + data[5] + "\n" + "Age Range: " + data[12] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l4pp1);
+                } else if (data[0].equals(l4pp2.getName())) {
+                    l4p2l.setText(data[1]);
+                    l4p2d.setText("Description: " + data[5] + "\n" + "Period: " + data[7] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l4pp2);
+                } else if (data[0].equals(l4pp3.getName())) {
+                    l4p3l.setText(data[1]);
+                    l4p3d.setText("Description: " + data[5] + "\n" + "Severity Rating: " + data[14] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l4pp3);
+                } else if (data[0].equals(l4pp4.getName())) {
+                    l4p4l.setText(data[1]);
+                    l4p4d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Release Date: " + data[13] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l4pp4);
+                } else if (data[0].equals(l4pp5.getName())) {
+                    l4p5l.setText(data[1]);
+                    l4p5d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Release Date: " + data[13] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l4pp5);
+                } else if (data[0].equals(l5pp1.getName())) {
+                    l5p1l.setText(data[1]);
+                    l5p1d.setText("Description: " + data[5] + "\n" + "Age Range: " + data[12] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l5pp1);
+                } else if (data[0].equals(l5pp2.getName())) {
+                    l5p2l.setText(data[1]);
+                    l5p2d.setText("Description: " + data[5] + "\n" + "Age Range: " + data[12] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l5pp2);
+                } else if (data[0].equals(l5pp3.getName())) {
+                    l5p3l.setText(data[1]);
+                    l5p3d.setText("Description: " + data[5] + "\n" + "Age Range: " + data[12] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l5pp3);
+                } else if (data[0].equals(l5pp4.getName())) {
+                    l5p4l.setText(data[1]);
+                    l5p4d.setText("Description: " + data[5] + "\n" + "Age Range: " + data[12] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l5pp4);
+                } else if (data[0].equals(l5pp5.getName())) {
+                    l5p5l.setText(data[1]);
+                    l5p5d.setText("Description: " + data[5] + "\n" + "Age Range: " + data[12] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l5pp5);
+                } else if (data[0].equals(l6pp1.getName())) {
+                    l6p1l.setText(data[1]);
+                    l6p1d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Release Date: " + data[13] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l6pp1);
+                } else if (data[0].equals(l6pp2.getName())) {
+                    l6p2l.setText(data[1]);
+                    l6p2d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Release Date: " + data[13] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l6pp2);
+                } else if (data[0].equals(l6pp3.getName())) {
+                    l6p3l.setText(data[1]);
+                    l6p3d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Release Date: " + data[13] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l6pp3);
+                } else if (data[0].equals(l6pp4.getName())) {
+                    l6p4l.setText(data[1]);
+                    l6p4d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Release Date: " + data[13] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l6pp4);
+                } else if (data[0].equals(l6pp5.getName())) {
+                    l6p5l.setText(data[1]);
+                    l6p5d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Release Date: " + data[13] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l6pp5);
+                } else if (data[0].equals(l7pp1.getName())) {
+                    l7p1l.setText(data[1]);
+                    l7p1d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Episode: " + data[9] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l7pp1);
+                } else if (data[0].equals(l7pp2.getName())) {
+                    l7p2l.setText(data[1]);
+                    l7p2d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Episode: " + data[9] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l7pp2);
+                } else if (data[0].equals(l7pp3.getName())) {
+                    l7p3l.setText(data[1]);
+                    l7p3d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Episode: " + data[9] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l7pp3);
+                } else if (data[0].equals(l7pp4.getName())) {
+                    l7p4l.setText(data[1]);
+                    l7p4d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Episode: " + data[9] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l7pp4);
+                } else if (data[0].equals(l7pp5.getName())) {
+                    l7p5l.setText(data[1]);
+                    l7p5d.setText("Description: " + data[5] + "\n" + "Rating: " + data[8] + "\n" + "Actors: " + data[10] + "\n" + "Episode: " + data[9] + "\n" + "Length: " + data[15]);
+                    setColors(data[2], l7pp5);
+                }
+                else{
+                    if(data == null)
+                        System.out.println("File is Empty or Not Enough Data To Fill Listing");
+                }
             }
-            if (data[0].equals(l2pp3.getName())) {
-                l2p3l.setText(data[1]);
-                l2p3d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l2pp3);
-            }
-            if (data[0].equals(l2pp4.getName())) {
-                l2p4l.setText(data[1]);
-                l2p4d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l2pp4);
-            }
-            if (data[0].equals(l2pp5.getName())) {
-                l2p5l.setText(data[1]);
-                l2p5d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l2pp5);
-            }
-            if (data[0].equals(l3pp1.getName())) {
-                l3p1l.setText(data[1]);
-                l3p1d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l3pp1);
-            }
-            if (data[0].equals(l3pp2.getName())) {
-                l3p2l.setText(data[1]);
-                l3p2d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l3pp2);
-            }
-            if (data[0].equals(l3pp3.getName())) {
-                l3p3l.setText(data[1]);
-                l3p3d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l3pp3);
-            }
-            if (data[0].equals(l3pp4.getName())) {
-                l3p4l.setText(data[1]);
-                l3p4d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l3pp4);
-            }
-            if (data[0].equals(l3pp5.getName())) {
-                l3p5l.setText(data[1]);
-                l3p5d.setText("Description: "+data[5]+"\n"+"Denomination: "+data[11]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l3pp5);
-            }
-            if (data[0].equals(l4pp1.getName())) {
-                l4p1l.setText(data[1]);
-                l4p1d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l4pp1);
-            }
-            if (data[0].equals(l4pp2.getName())) {
-                l4p2l.setText(data[1]);
-                l4p2d.setText("Description: "+data[5]+"\n"+"Period: "+data[7]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l4pp2);
-            }
-            if (data[0].equals(l4pp3.getName())) {
-                l4p3l.setText(data[1]);
-                l4p3d.setText("Description: "+data[5]+"\n"+"Severity Rating: "+data[14]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l4pp3);
-            }
-            if (data[0].equals(l4pp4.getName())) {
-                l4p4l.setText(data[1]);
-                l4p4d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l4pp4);
-            }
-            if (data[0].equals(l4pp5.getName())) {
-                l4p5l.setText(data[1]);
-                l4p5d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l4pp5);
-            }
-            if (data[0].equals(l5pp1.getName())) {
-                l5p1l.setText(data[1]);
-                l5p1d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l5pp1);
-            }
-            if (data[0].equals(l5pp2.getName())) {
-                l5p2l.setText(data[1]);
-                l5p2d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l5pp2);
-            }
-            if (data[0].equals(l5pp3.getName())) {
-                l5p3l.setText(data[1]);
-                l5p3d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l5pp3);
-            }
-            if (data[0].equals(l5pp4.getName())) {
-                l5p4l.setText(data[1]);
-                l5p4d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l5pp4);
-            }
-            if (data[0].equals(l5pp5.getName())) {
-                l5p5l.setText(data[1]);
-                l5p5d.setText("Description: "+data[5]+"\n"+"Age Range: "+data[12]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l5pp5);
-            }
-            if (data[0].equals(l6pp1.getName())) {
-                l6p1l.setText(data[1]);
-                l6p1d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l6pp1);
-            }
-            if (data[0].equals(l6pp2.getName())) {
-                l6p2l.setText(data[1]);
-                l6p2d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l6pp2);
-            }
-            if (data[0].equals(l6pp3.getName())) {
-                l6p3l.setText(data[1]);
-                l6p3d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l6pp3);
-            }
-            if (data[0].equals(l6pp4.getName())) {
-                l6p4l.setText(data[1]);
-                l6p4d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l6pp4);
-            }
-            if (data[0].equals(l6pp5.getName())) {
-                l6p5l.setText(data[1]);
-                l6p5d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Release Date: "+data[13]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l6pp5);
-            }
-            if (data[0].equals(l7pp1.getName())) {
-                l7p1l.setText(data[1]);
-                l7p1d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l7pp1);
-            }
-            if (data[0].equals(l7pp2.getName())) {
-                l7p2l.setText(data[1]);
-                l7p2d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l7pp2);
-            }
-            if (data[0].equals(l7pp3.getName())) {
-                l7p3l.setText(data[1]);
-                l7p3d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l7pp3);
-            }
-            if (data[0].equals(l7pp4.getName())) {
-                l7p4l.setText(data[1]);
-                l7p4d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l7pp4);}
-            if (data[0].equals(l7pp5.getName())) {
-                l7p5l.setText(data[1]);
-                l7p5d.setText("Description: "+data[5]+"\n"+"Rating: "+data[8]+"\n"+"Actors: "+data[10]+"\n"+"Episode: "+data[9]+"\n"+"Length: "+data[15]);
-                setColors(data[2], l7pp5);
-            }
-            }
+        }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

@@ -165,7 +165,7 @@ public class Control {
 
         clabel.setBackground(new Color(255, 134, 146));
         clabel.setForeground(new Color(30, 30, 93));
-        //clabel.setFont(new Font(""));
+        clabel.setFont(new Font("Anita", 1, 24));
         clabel.setPreferredSize(new Dimension(600, 50));
         clabel.setOpaque(true);
         clabel.setVisible(true);

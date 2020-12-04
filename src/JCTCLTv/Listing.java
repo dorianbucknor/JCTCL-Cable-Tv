@@ -1,7 +1,9 @@
 package JCTCLTv;
 
+import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Listing {
@@ -89,8 +91,9 @@ public class Listing {
     }
 
     public static void main(String[] args) {
+        System.out.println(Arrays.toString(GraphicsEnvironment.getLocalGraphicsEnvironment().getAllFonts()));
         GUI.Fonts();
-        //Listing l = new Listing();
-        //GUI g = new GUI();
+        Listing l = new Listing();
+        GUI g = new GUI();
     }
 }
