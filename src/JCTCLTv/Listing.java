@@ -88,9 +88,10 @@ public class Listing {
         data.add(6,_ch7);
 
         CsvHandler.toFile(new File("ListingData.csv"), data, heading);
+
     }
 
-    public static void main(String[] args) {
+    public void start(){
         GUI.Fonts();
         Listing l = new Listing();
         GUI g = new GUI();
