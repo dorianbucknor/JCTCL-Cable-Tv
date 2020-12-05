@@ -208,6 +208,7 @@ public class GUI extends Listing{
     private JPanel logInPanel;
     private JLabel pswdF;
     private JLabel usrNF;
+    private JPanel credits;
     protected JPanel list;
     protected JScrollPane scroll2;
     protected JScrollPane scroll3;
