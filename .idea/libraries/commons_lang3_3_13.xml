@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="commons-lang3-3.13">
+    <CLASSES>
+      <root url="file://C:/JDK/commons-lang3-3.13.0" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://C:/JDK/commons-lang3-3.13.0/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://C:/JDK/commons-lang3-3.13.0" />
+    </SOURCES>
+    <jarDirectory url="file://C:/JDK/commons-lang3-3.13.0" recursive="false" />
+    <jarDirectory url="file://C:/JDK/commons-lang3-3.13.0" recursive="false" type="SOURCES" />
+  </library>
+</component>
