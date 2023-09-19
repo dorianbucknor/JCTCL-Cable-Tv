@@ -120,11 +120,9 @@ public abstract class Programme{
         isNew = _new;
     }
     //accessor and modifier for programme id
-
     public void setProgId(String progId) {
         this.progId = progId;
     }
-
     public String getProgId() {
         return progId;
     }

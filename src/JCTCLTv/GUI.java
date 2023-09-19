@@ -12,6 +12,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Vector;
 import java.util.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class GUI extends Listing{
     //declare all components and elements used in gui
@@ -209,6 +212,8 @@ public class GUI extends Listing{
     private JLabel pswdF;
     private JLabel usrNF;
     private JPanel credits;
+    private JPanel listingview;
+    private JPanel navigaion;
     protected JPanel list;
     protected JScrollPane scroll2;
     protected JScrollPane scroll3;
@@ -255,6 +260,16 @@ public class GUI extends Listing{
         LoadScreen();
         TimeDate();
         ListingCon();
+        mainPanel.repaint();
+
+        ScheduledExecutorService rP = Executors.newSingleThreadScheduledExecutor();
+        rP.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                mainPanel.repaint();
+            }
+        }, 0, 1, TimeUnit.MILLISECONDS);
+
         ViewPrograms();
         l1pp1.requestFocus();
     }
@@ -275,7 +290,7 @@ public class GUI extends Listing{
 
         Vector<Component> chanOrder = new Vector<>(7);
         chanOrder.add(l1);
-        l1.setName("ch1");
+      //  l1.setName("ch1");
         chanOrder.add(l1pp1);
         l1pp1.setName("ch1P1");
         chanOrder.add(l1pp2);
@@ -288,7 +303,7 @@ public class GUI extends Listing{
         l1pp5.setName("ch1P5");
 
         chanOrder.add(l2);
-        l2.setName("ch2");
+      //  l2.setName("ch2");
         chanOrder.add(l2pp1);
         chanOrder.add(l2pp2);
         chanOrder.add(l2pp3);
@@ -301,7 +316,7 @@ public class GUI extends Listing{
         l2pp5.setName("ch2P5");
 
         chanOrder.add(l3);
-        l3.setName("ch3");
+      //  l3.setName("ch3");
         chanOrder.add(l3pp1);
         chanOrder.add(l3pp2);
         chanOrder.add(l3pp3);
@@ -314,7 +329,7 @@ public class GUI extends Listing{
         l3pp5.setName("ch3P5");
 
         chanOrder.add(l4);
-        l4.setName("ch4");
+      //  l4.setName("ch4");
         chanOrder.add(l4pp1);
         chanOrder.add(l4pp2);
         chanOrder.add(l4pp3);
@@ -327,7 +342,7 @@ public class GUI extends Listing{
         l4pp5.setName("ch4P5");
 
         chanOrder.add(l5);
-        l5.setName("ch5");
+      //  l5.setName("ch5");
         chanOrder.add(l5pp1);
         chanOrder.add(l5pp2);
         chanOrder.add(l5pp3);
@@ -340,7 +355,7 @@ public class GUI extends Listing{
         l5pp5.setName("ch5P5");
 
         chanOrder.add(l6);
-        l6.setName("ch6");
+       // l6.setName("ch6");
         chanOrder.add(l6pp1);
         chanOrder.add(l6pp2);
         chanOrder.add(l6pp3);
@@ -353,7 +368,7 @@ public class GUI extends Listing{
         l6pp5.setName("ch6P5");
 
         chanOrder.add(l7);
-        l7.setName("ch7");
+       // l7.setName("ch7");
         chanOrder.add(l7pp1);
         chanOrder.add(l7pp2);
         chanOrder.add(l7pp3);
@@ -369,13 +384,13 @@ public class GUI extends Listing{
         progs.setFocusTraversalPolicy(chanPol);
         FocusAdapter listener = new Control().DisplayController(mainPanel, frame);
 
-        l1.addFocusListener(listener);
-        l2.addFocusListener(listener);
-        l3.addFocusListener(listener);
-        l4.addFocusListener(listener);
-        l5.addFocusListener(listener);
-        l6.addFocusListener(listener);
-        l7.addFocusListener(listener);
+       // l1.addFocusListener(listener);
+       // l2.addFocusListener(listener);
+       // l3.addFocusListener(listener);
+      //  l4.addFocusListener(listener);
+      //  l5.addFocusListener(listener);
+       // l6.addFocusListener(listener);
+       // l7.addFocusListener(listener);
         l1pp1.addFocusListener(listener);
         l1pp2.addFocusListener(listener);
         l1pp3.addFocusListener(listener);
@@ -411,8 +426,6 @@ public class GUI extends Listing{
         l7pp3.addFocusListener(listener);
         l7pp4.addFocusListener(listener);
         l7pp5.addFocusListener(listener);
-
-
         AssignData();
     }
 
@@ -423,7 +436,6 @@ public class GUI extends Listing{
         DateTimeFormatter tFormatter = DateTimeFormatter.ofPattern("hh:mm a");
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
         DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("EEEE");
-
 
         LocalDateTime Date = LocalDateTime.now();
         LocalDateTime Day = LocalDateTime.now();
@@ -439,6 +451,7 @@ public class GUI extends Listing{
         T4.setText(LTime.plusSeconds(34560).format(tFormatter) + " - " + LTime.plusSeconds(51840).format(tFormatter));
         T5.setText(LTime.plusSeconds(51840).format(tFormatter) + " - " + LTime.plusSeconds(69120).format(tFormatter));
     }
+
     //log in controller to view programme listing file
     public void ViewPrograms(){
         //
@@ -460,7 +473,6 @@ public class GUI extends Listing{
                             Desktop desktop = Desktop.getDesktop();
                             if (file.exists()) {      //checks file exists or not
                                 desktop.open(file);
-
                                 mainLayout.show(mainPanel, "Main Screen");
                                 progs.setFocusable(true);
                                 curCard = "Main Screen";

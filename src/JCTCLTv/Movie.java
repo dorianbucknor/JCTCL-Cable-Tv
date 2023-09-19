@@ -80,6 +80,6 @@ public class Movie extends Programme {
     //returns details of movie
     @Override
     public String[] Details() {
-        return new String[]{progId, progName, progColour, showDate, showTime, description, Boolean.toString(isNew), null, Float.toString(rating), null, Arrays.toString(actors), null, null, releaseDate, null, Float.toString(length)};
+        return new String[]{progId, progName, progColour, showDate, showTime, description, Boolean.toString(isNew), null, Float.toString(rating), null, Arrays.toString(actors), null, null, releaseDate, null, Float.toString(length), channel.getChName(), Integer.toString(channel.getChNumber())};
     }
 }

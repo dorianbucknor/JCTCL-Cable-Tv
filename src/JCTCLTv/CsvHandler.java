@@ -1,5 +1,6 @@
 package JCTCLTv;
-/**This class wascreated to handle all file operations withint the document including deleting, creating and adding information to files**/
+/**This class was created to handle all file operations withing the document including deleting,
+ * creating and adding information to files**/
 import com.opencsv.*;
 import com.opencsv.exceptions.CsvException;
 
@@ -15,8 +16,8 @@ public class CsvHandler {
         try {
             //convert List of two dimensional array to a list of a list of string arrays
             List<List<String[]>> _data = new ArrayList<>();
-            for(int i = 0; i < 7; i++) {
-               _data.add(Arrays.asList(chData.get(i)));
+            for (int i = 0; i < 7; i++) {
+                _data.add(Arrays.asList(chData.get(i)));
             }
             // create FileWriter object with file as parameter
             FileWriter outFile = new FileWriter(_file);
@@ -27,7 +28,7 @@ public class CsvHandler {
             //add heading
             writer.writeNext(head);
             // create a List which contains String array
-            for(int i = 0; i < 7; i++) {
+            for (int i = 0; i < 7; i++) {
                 writer.writeAll(_data.get(i));
             }
 
@@ -44,35 +45,33 @@ public class CsvHandler {
         File file = new File(_file);
         String[] data = null;
 
-        if(file.exists()){
-            System.out.println("heresr");
-        }
-
-    try {
-            CSVReader csvReader = new CSVReader(new FileReader(file));
-            String[] line;
-            while ((line = csvReader.readNext()) != null) {
-                if (line != null) {
-                    for (String n: line
-                         ) {
-                        if (n.equals(srchval)) {
-                            data = line;
+        if (file.exists()) {
+            try {
+                CSVReader csvReader = new CSVReader(new FileReader(file));
+                String[] line;
+                while ((line = csvReader.readNext()) != null) {
+                    if (line != null) {
+                        for (String n : line
+                        ) {
+                            if (n.equals(srchval)) {
+                                data = line;
+                            }
                         }
                     }
                 }
-            }
-            if(data == null){
-                System.out.println("Not Found");
-            }
+                if (data == null) {
+                    System.out.println("Not Found");
+                }
 
-        } catch (Exception e) {
-            e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         System.out.println("Exit");
-            return data;
+        return data;
     }
 
-    public static void addMultipleRecords(List<String[]> data, File file){
+    public static void addMultipleRecords(List<String[]> data, File file) {
         // create FileWriter object with file as parameter
         FileWriter outFile = null;
         try {
@@ -83,11 +82,10 @@ public class CsvHandler {
 
         // create CSVWriter object filewriter object as parameter
         CSVWriter writer = new CSVWriter(outFile);
-
         writer.writeAll(data);
     }
 
-    public static void addRecord(String[] data, File file){
+    public static void addRecord(String[] data, File file) {
         // create FileWriter object with file as parameter
         FileWriter outFile = null;
         try {
@@ -107,7 +105,8 @@ public class CsvHandler {
             e.printStackTrace();
         }
     }
-    public static List<String[]> readAllData(String _file){
+
+    public static List<String[]> readAllData(String _file) {
         File file = new File(_file);
         List<String[]> data = null;
 
@@ -128,40 +127,30 @@ public class CsvHandler {
 
     public static void removeData(String srchval, String _file) {
         File file = new File(_file);
-        String[] data = null;
-        List<String[]> alldata = null;
-        int idx = 0;
+        File tmpfile = new File("TP.csv");
+        String filename = file.getName();
 
-        if(file.exists()){
-            System.out.println("heresr");
-        }
-
-        try {
-            CSVReader csvReader = new CSVReader(new FileReader(file));
-            String[] line;
-            while ((line = csvReader.readNext()) != null) {
-                if (line != null) {
-                    for (String n: line
-                    ) {
-                        if (n.equals(srchval)) {
-                           break;
+        if (file.exists()) {
+            try {
+                CSVReader csvReader = new CSVReader(new FileReader(file));
+                String[] line;
+                while ((line = csvReader.readNext()) != null) {
+                    if (line != null) {
+                        for (String n : line
+                        ) {
+                            if (n.equals(srchval)) {
+                                System.out.println("found");
+                            } else {
+                                CsvHandler.addRecord(line, tmpfile);
+                            }
                         }
+
                     }
                 }
-                idx++;
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            if(data == null){
-                System.out.println("Not Found");
-            }
-            alldata = CsvHandler.readAllData(file.getPath());
-            if(alldata != null){
-                alldata.remove(idx-1);
-            }
-            CsvHandler.addMultipleRecords(alldata, file);
-        } catch (Exception e) {
-            e.printStackTrace();
+            tmpfile.renameTo(file);
         }
-        System.out.println("Exit");
-
     }
 }

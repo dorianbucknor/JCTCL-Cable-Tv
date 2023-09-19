@@ -1,9 +1,7 @@
 package JCTCLTv;
 
-import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Listing {
@@ -64,19 +62,39 @@ public class Listing {
 
     //put extra info inside brackets
     public Listing() {
+
+        Listing1Channels();
+
+        Listing2Channels();
+
+        Listing3Channels();
+
+        Listing4Channels();
+
+        Listing5Channels();
+
+        Listing6Channels();
+
+        Listing7Channels();
+
+        ListingDetailsToFIle();
+
+    }
+
+    private void ListingDetailsToFIle() {
         List<String[][]> data = new ArrayList<>();
 
         //List<String[]> _ch1Data = new ArrayList<>();
-        String[][] _ch1 = {ch1.Details(), ch1P1.Details(), ch1P2.Details(), ch1P3.Details(), ch1P4.Details(), ch1P5.Details()};
-        String[][] _ch2 = {ch2.Details(), ch2P1.Details(), ch2P2.Details(), ch2P3.Details(), ch2P4.Details(), ch2P5.Details()};
-        String[][] _ch3 = {ch3.Details(), ch3P1.Details(), ch3P2.Details(), ch3P3.Details(), ch3P4.Details(), ch3P5.Details()};
-        String[][] _ch4 = {ch4.Details(), ch4P1.Details(), ch4P2.Details(), ch4P3.Details(), ch4P4.Details(), ch4P5.Details()};
-        String[][] _ch5 = {ch5.Details(), ch5P1.Details(), ch5P2.Details(), ch5P3.Details(), ch5P4.Details(), ch5P5.Details()};
-        String[][] _ch6 = {ch6.Details(), ch6P1.Details(), ch6P2.Details(), ch6P3.Details(), ch6P4.Details(), ch6P5.Details()};
-        String[][] _ch7 = {ch7.Details(), ch7P1.Details(), ch7P2.Details(), ch7P3.Details(), ch7P4.Details(), ch7P5.Details()};
+        String[][] _ch1 = {ch1P1.Details(), ch1P2.Details(), ch1P3.Details(), ch1P4.Details(), ch1P5.Details()};
+        String[][] _ch2 = {ch2P1.Details(), ch2P2.Details(), ch2P3.Details(), ch2P4.Details(), ch2P5.Details()};
+        String[][] _ch3 = {ch3P1.Details(), ch3P2.Details(), ch3P3.Details(), ch3P4.Details(), ch3P5.Details()};
+        String[][] _ch4 = {ch4P1.Details(), ch4P2.Details(), ch4P3.Details(), ch4P4.Details(), ch4P5.Details()};
+        String[][] _ch5 = {ch5P1.Details(), ch5P2.Details(), ch5P3.Details(), ch5P4.Details(), ch5P5.Details()};
+        String[][] _ch6 = {ch6P1.Details(), ch6P2.Details(), ch6P3.Details(), ch6P4.Details(), ch6P5.Details()};
+        String[][] _ch7 = {ch7P1.Details(), ch7P2.Details(), ch7P3.Details(), ch7P4.Details(), ch7P5.Details()};
 
         String[] heading = {"Programme Id - 1", "Programme Name - 2", "Programme Color - 3", "Show Date - 4", "Show Time - 5", "Description 6 ",
-                "New - 7", "Period - 8", "Rating - 9", "Episode - 10", "Actors - 11", "Denomination - 12", "Age Range - 13", "Release Date - 14", "Severity Rating - 15"};
+                "New - 7", "Period - 8", "Rating - 9", "Episode - 10", "Actors - 11", "Denomination - 12", "Age Range - 13", "Release Date - 14", "Severity Rating - 15", "Channel", "Channel Number"};
 
 
         data.add(0, _ch1);
@@ -88,12 +106,71 @@ public class Listing {
         data.add(6,_ch7);
 
         CsvHandler.toFile(new File("ListingData.csv"), data, heading);
-
     }
 
-    public void start(){
+    private void Listing7Channels() {
+        ch7P1.setChannel(ch7);
+        ch7P2.setChannel(ch7);
+        ch7P3.setChannel(ch7);
+        ch7P4.setChannel(ch7);
+        ch7P5.setChannel(ch7);
+    }
+
+    private void Listing6Channels() {
+        ch6P1.setChannel(ch6);
+        ch6P2.setChannel(ch6);
+        ch6P3.setChannel(ch6);
+        ch6P4.setChannel(ch6);
+        ch6P5.setChannel(ch6);
+    }
+
+    private void Listing5Channels() {
+        ch5P1.setChannel(ch5);
+        ch5P2.setChannel(ch5);
+        ch5P3.setChannel(ch5);
+        ch5P4.setChannel(ch5);
+        ch5P5.setChannel(ch5);
+    }
+
+    private void Listing4Channels() {
+        ch4P1.setChannel(ch4);
+        ch4P2.setChannel(ch4);
+        ch4P3.setChannel(ch4);
+        ch4P4.setChannel(ch4);
+        ch4P5.setChannel(ch4);
+    }
+
+    private void Listing3Channels() {
+        ch3P1.setChannel(ch3);
+        ch3P2.setChannel(ch3);
+        ch3P3.setChannel(ch3);
+        ch3P4.setChannel(ch3);
+        ch3P5.setChannel(ch3);
+    }
+
+    private void Listing2Channels() {
+        ch2P1.setChannel(ch2);
+        ch2P2.setChannel(ch2);
+        ch2P3.setChannel(ch2);
+        ch2P4.setChannel(ch2);
+        ch2P5.setChannel(ch2);
+    }
+
+    private void Listing1Channels() {
+        ch1P1.setChannel(ch1);
+        ch1P2.setChannel(ch1);
+        ch1P3.setChannel(ch1);
+        ch1P4.setChannel(ch1);
+        ch1P5.setChannel(ch1);
+    }
+
+    public static void start(){
         GUI.Fonts();
         Listing l = new Listing();
         GUI g = new GUI();
+    }
+
+    public static void main(String[] args) {
+        start();
     }
 }

@@ -38,7 +38,7 @@ public class News extends Programme {
 
     @Override
     public String[] Details() {
-        return new String[] {progId, progName, progColour, showDate, showTime, description, Boolean.toString(isNew), period, null, null, null, null, null, null, null, Float.toString(length)};
+        return new String[] {progId, progName, progColour, showDate, showTime, description, Boolean.toString(isNew), period, null, null, null, null, null, null, null, Float.toString(length), channel.getChName(), Integer.toString(channel.getChNumber())};
     }
 }
 
